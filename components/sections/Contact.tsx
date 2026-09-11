@@ -51,7 +51,7 @@ export function Contact() {
     if (!parsed.success) {
       const fieldErrors: any = {};
       const flat = parsed.error.flatten().fieldErrors;
-      Object.keys(flat).forEach(key => fieldErrors[key] = flat[key]?.[0]);
+      Object.keys(flat).forEach(key => fieldErrors[key] = flat[key as keyof typeof flat]?.[0]);
       setErrors(fieldErrors);
       showToast("Please check the highlighted fields.", "error");
       return;
@@ -81,7 +81,7 @@ export function Contact() {
     if (!parsed.success) {
       const fieldErrors: any = {};
       const flat = parsed.error.flatten().fieldErrors;
-      Object.keys(flat).forEach(key => fieldErrors[key] = flat[key]?.[0]);
+      Object.keys(flat).forEach(key => fieldErrors[key] = flat[key as keyof typeof flat]?.[0]);
       setReviewErrors(fieldErrors);
       showToast("Please check the highlighted fields.", "error");
       return;
