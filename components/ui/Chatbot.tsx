@@ -380,7 +380,7 @@ export function Chatbot() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-none">
               {/* Welcome */}
               <div className="flex items-start gap-2">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#00F0FF]/20 text-[#00F0FF] mt-1">

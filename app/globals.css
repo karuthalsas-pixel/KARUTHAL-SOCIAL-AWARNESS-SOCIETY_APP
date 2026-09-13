@@ -54,6 +54,14 @@
   .hairline {
     @apply border-stone/40 dark:border-stone-dark/30;
   }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @keyframes fiberPulse {
