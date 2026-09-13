@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import { asc } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { galleryItems } from "@/lib/schema";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -41,19 +40,26 @@ export async function POST(req: Request) {
       const buffer = Buffer.from(bytes);
       
       const fileName = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
-      const uploadDir = path.join(process.cwd(), "public", "uploads", "gallery");
       
-      // Ensure directory exists
-      try {
-        await mkdir(uploadDir, { recursive: true });
-      } catch (err) {
-        // ignore
-      }
+      // Upload to Supabase Storage bucket named 'uploads'
+      const { data: uploadData, error: uploadError } = await supabaseAdmin.storage
+        .from('uploads')
+        .upload(`gallery/${fileName}`, buffer, {
+          contentType: file.type || "image/jpeg",
+          upsert: false,
+        });
 
-      const filePath = path.join(uploadDir, fileName);
+      if (uploadError) {
+        console.error("Supabase upload error:", uploadError);
+        return NextResponse.json({ ok: false, message: "Failed to upload image to Supabase." }, { status: 500 });
+      }
       
-      await writeFile(filePath, buffer);
-      imageUrl = `/uploads/gallery/${fileName}`;
+      // Get the public URL for the uploaded file
+      const { data: publicUrlData } = supabaseAdmin.storage
+        .from('uploads')
+        .getPublicUrl(`gallery/${fileName}`);
+        
+      imageUrl = publicUrlData.publicUrl;
     }
 
     if (!title || !category || !imageUrl) {

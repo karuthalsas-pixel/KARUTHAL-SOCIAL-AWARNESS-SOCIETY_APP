@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { employees } from "@/lib/schema";
-import { writeFile, unlink } from "fs/promises";
-import path from "path";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
@@ -28,11 +27,24 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
       const buffer = Buffer.from(bytes);
       
       const fileName = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
-      const uploadDir = path.join(process.cwd(), "public", "uploads", "employees");
-      const filePath = path.join(uploadDir, fileName);
       
-      await writeFile(filePath, buffer);
-      imageUrl = `/uploads/employees/${fileName}`;
+      const { data: uploadData, error: uploadError } = await supabaseAdmin.storage
+        .from('uploads')
+        .upload(`employees/${fileName}`, buffer, {
+          contentType: file.type || "image/jpeg",
+          upsert: false,
+        });
+
+      if (uploadError) {
+        console.error("Supabase upload error:", uploadError);
+        return NextResponse.json({ ok: false, message: "Failed to upload image to Supabase." }, { status: 500 });
+      }
+      
+      const { data: publicUrlData } = supabaseAdmin.storage
+        .from('uploads')
+        .getPublicUrl(`employees/${fileName}`);
+        
+      imageUrl = publicUrlData.publicUrl;
       
       // We could optionally delete the old image here, but skipping for simplicity
     }
