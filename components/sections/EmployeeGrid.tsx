@@ -178,7 +178,7 @@ export function EmployeeGrid() {
                 className={`cursor-pointer group relative bg-[#024950]/40 backdrop-blur-md rounded-2xl border ${theme.border} ${theme.hoverBorder} overflow-hidden ${theme.shadow} ${theme.hoverShadow} transition-all duration-500 h-full flex flex-col`}
               >
                 {/* Image Section */}
-                <div className="relative aspect-square sm:h-72 sm:aspect-auto w-full overflow-hidden bg-[#001f22]">
+                <div className="relative h-[300px] sm:h-[350px] w-full shrink-0 overflow-hidden bg-[#001f22]">
                   {emp.imageUrl ? (
                     <Image
                       src={emp.imageUrl}
