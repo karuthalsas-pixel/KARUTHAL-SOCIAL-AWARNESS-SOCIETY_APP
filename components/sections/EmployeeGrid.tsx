@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { User, MapPin, Phone } from "lucide-react";
+import { User, MapPin, Phone, X } from "lucide-react";
 
 type Employee = {
   id: number;
@@ -118,6 +118,7 @@ const cardThemes = [
 export function EmployeeGrid() {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
 
   useEffect(() => {
     async function fetchEmployees() {
@@ -134,6 +135,15 @@ export function EmployeeGrid() {
       }
     }
     fetchEmployees();
+  }, []);
+
+  // Close modal on escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedEmployee(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   if (loading || employees.length === 0) {
@@ -164,7 +174,8 @@ export function EmployeeGrid() {
             <Reveal key={emp.id} delay={0.1 + (i % 4) * 0.1}>
               <motion.div
                 whileHover={{ y: -10 }}
-                className={`group relative bg-[#024950]/40 backdrop-blur-md rounded-2xl border ${theme.border} ${theme.hoverBorder} overflow-hidden ${theme.shadow} ${theme.hoverShadow} transition-all duration-500 h-full flex flex-col`}
+                onClick={() => setSelectedEmployee(emp)}
+                className={`cursor-pointer group relative bg-[#024950]/40 backdrop-blur-md rounded-2xl border ${theme.border} ${theme.hoverBorder} overflow-hidden ${theme.shadow} ${theme.hoverShadow} transition-all duration-500 h-full flex flex-col`}
               >
                 {/* Image Section - REMOVED OPACITY OVERLAYS FOR MAXIMUM CLARITY */}
                 <div className="relative h-72 overflow-hidden bg-[#001f22]">
@@ -220,6 +231,80 @@ export function EmployeeGrid() {
           );
         })}
       </div>
+
+      <AnimatePresence>
+        {selectedEmployee && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedEmployee(null)}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            />
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-[#0FA4AF]/30 bg-gradient-to-br from-[#002b2e] to-[#001f22] shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+            >
+              <button
+                onClick={() => setSelectedEmployee(null)}
+                className="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white/70 backdrop-blur-md transition-colors hover:bg-black/60 hover:text-white"
+              >
+                <X size={18} />
+              </button>
+
+              <div className="relative h-[400px] w-full bg-[#001f22]">
+                {selectedEmployee.imageUrl ? (
+                  <Image
+                    src={selectedEmployee.imageUrl}
+                    alt={selectedEmployee.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 500px"
+                    className="object-cover object-top"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#024950] to-[#002b2e]">
+                    <User size={80} className="text-[#0FA4AF]/50" />
+                  </div>
+                )}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#002b2e] to-transparent" />
+              </div>
+
+              <div className="relative -mt-12 p-8 pt-0">
+                <div className="mb-4 inline-flex items-center rounded-full border border-[#00F0FF]/30 bg-[#00F0FF]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#00F0FF] backdrop-blur-md">
+                  {selectedEmployee.role}
+                </div>
+                <h3 className="mb-6 font-display text-3xl font-bold text-white">
+                  {selectedEmployee.name}
+                </h3>
+
+                <div className="space-y-4">
+                  {selectedEmployee.phone && (
+                    <div className="flex items-center gap-4 text-[#AFDDE5]">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#00F0FF]">
+                        <Phone size={18} />
+                      </div>
+                      <span className="text-lg">{selectedEmployee.phone}</span>
+                    </div>
+                  )}
+                  {selectedEmployee.address && (
+                    <div className="flex items-start gap-4 text-[#AFDDE5]">
+                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#00F0FF]">
+                        <MapPin size={18} />
+                      </div>
+                      <span className="text-lg leading-relaxed">{selectedEmployee.address}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
