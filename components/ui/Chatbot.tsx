@@ -472,31 +472,25 @@ export function Chatbot() {
         )}
       </AnimatePresence>
 
-      {/* Floating Robot Button — bottom LEFT so it doesn't clash with WhatsApp/Call buttons on the right */}
-      <motion.button
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1.6, type: "spring", stiffness: 260, damping: 20 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-      className="fixed bottom-[168px] right-6 z-[999] flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#024950] to-[#00F0FF] text-white shadow-[0_0_25px_rgba(0,240,255,0.5)] hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] transition-all"
-        aria-label="Open Karuthal Chatbot"
-      >
-        <span className="absolute inset-0 rounded-full bg-[#00F0FF] animate-ping opacity-20" />
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={isOpen ? "close" : "robot"}
-            initial={{ rotate: -90, opacity: 0 }}
-            animate={{ rotate: 0, opacity: 1 }}
-            exit={{ rotate: 90, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="relative"
+      {/* Floating Robot Button */}
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.button
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            transition={{ delay: 0.1, type: "spring", stiffness: 260, damping: 20 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setIsOpen(true)}
+            className="fixed bottom-[168px] right-6 z-[999] flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#024950] to-[#00F0FF] text-white shadow-[0_0_25px_rgba(0,240,255,0.5)] hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] transition-shadow"
+            aria-label="Open Karuthal Chatbot"
           >
-            {isOpen ? <X size={24} /> : <RobotIcon />}
-          </motion.div>
-        </AnimatePresence>
-      </motion.button>
+            <span className="absolute inset-0 rounded-full bg-[#00F0FF] animate-ping opacity-20" />
+            <RobotIcon />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </>
   );
 }
