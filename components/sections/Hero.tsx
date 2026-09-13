@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -26,11 +27,13 @@ export function Hero() {
       className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden text-[#AFDDE5]"
     >
       {/* Full-screen background image */}
-      <img
+      <Image
         src="/hero-banner.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center -z-10"
+        fill
+        priority
+        className="object-cover object-center -z-10"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#001f22]/60 via-[#002b2e]/40 to-transparent" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#001f22]/70 via-[#001f22]/20 to-transparent" />
