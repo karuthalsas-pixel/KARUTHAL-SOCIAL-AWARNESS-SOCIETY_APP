@@ -19,8 +19,7 @@ export function ScrollGlowingOrb() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-30 flex justify-center overflow-hidden">
-      {/* Central subtle glowing laser track line */}
-      <div className="h-full w-[1.5px] bg-gradient-to-b from-transparent via-[#00F0FF]/25 via-[#EC4899]/25 to-transparent" />
+
 
       {/* Scroll-Driven Multi-Color Glowing Orb */}
       <motion.div

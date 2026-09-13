@@ -5,22 +5,6 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Hide scrollbar globally across all browsers */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
-
-  html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
 
   section[id] {
