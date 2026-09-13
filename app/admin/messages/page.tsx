@@ -138,7 +138,7 @@ export default function MessagesAdminPage() {
           {currentMessages.map((msg) => (
             <div
               key={msg.id}
-              className={`rounded-xl border shadow-lg transition-all ${
+              className={`rounded-xl border shadow-lg transition-all overflow-hidden w-full ${
                 msg.status === "new"
                   ? "bg-[#001d2b]/70 border-[#00F0FF]/30"
                   : "bg-[#02393e]/40 border-[#0FA4AF]/20"
@@ -190,13 +190,13 @@ export default function MessagesAdminPage() {
                 </div>
 
                 {/* Message body */}
-                <div className="mt-3 bg-[#001f22]/50 rounded-lg border border-white/5 p-3 sm:p-4">
+                <div className="mt-3 bg-[#001f22]/50 rounded-lg border border-white/5 p-3 sm:p-4 overflow-hidden">
                   {msg.projectType && (
                     <span className="inline-block px-2 py-1 bg-[#0FA4AF]/20 text-[#00F0FF] text-xs font-semibold rounded mb-2">
                       {msg.projectType}
                     </span>
                   )}
-                  <p className="text-sm text-[#AFDDE5] whitespace-pre-wrap break-words leading-relaxed">{msg.message}</p>
+                  <p className="text-sm text-[#AFDDE5] whitespace-pre-wrap break-all leading-relaxed">{msg.message}</p>
                 </div>
 
                 {/* Action buttons */}
