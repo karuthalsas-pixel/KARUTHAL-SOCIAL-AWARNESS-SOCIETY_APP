@@ -133,7 +133,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       </aside>
 
       {/* Main Content */}
-      <main className="relative z-10 flex-1 h-screen overflow-y-auto custom-scrollbar md:pt-0 pt-16">
+      <main className="relative z-10 flex-1 h-screen overflow-y-auto overflow-x-hidden custom-scrollbar md:pt-0 pt-16">
         {children}
       </main>
     </div>
