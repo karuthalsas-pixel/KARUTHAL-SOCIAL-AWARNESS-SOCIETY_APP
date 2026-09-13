@@ -69,16 +69,7 @@ export async function DELETE(req: Request, { params }: { params: { id: string } 
   try {
     const id = parseInt(params.id, 10);
     
-    // Optional: Fetch the employee to delete the associated image file
-    const [existing] = await db.select().from(employees).where(eq(employees.id, id));
-    if (existing && existing.imageUrl && existing.imageUrl.startsWith('/uploads/')) {
-        try {
-            const filePath = path.join(process.cwd(), "public", existing.imageUrl);
-            await unlink(filePath);
-        } catch (e) {
-            console.error("Could not delete image file", e);
-        }
-    }
+    // Optional: delete the old image from Supabase storage here if needed
 
     await db.delete(employees).where(eq(employees.id, id));
     

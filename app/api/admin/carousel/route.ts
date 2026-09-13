@@ -38,17 +38,24 @@ export async function POST(req: NextRequest) {
       const buffer = Buffer.from(bytes);
       
       const fileName = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
-      const uploadDir = path.join(process.cwd(), "public", "uploads", "carousel");
-      
-      try {
-        await mkdir(uploadDir, { recursive: true });
-      } catch (err) {
-        // ignore
+
+      const { error: uploadError } = await supabaseAdmin.storage
+        .from('uploads')
+        .upload(`carousel/${fileName}`, buffer, {
+          contentType: file.type || "image/jpeg",
+          upsert: false,
+        });
+
+      if (uploadError) {
+        console.error("Supabase upload error:", uploadError);
+        return NextResponse.json({ ok: false, message: "Failed to upload image to Supabase." }, { status: 500 });
       }
 
-      const filePath = path.join(uploadDir, fileName);
-      await writeFile(filePath, buffer);
-      imageUrl = `/uploads/carousel/${fileName}`;
+      const { data: publicUrlData } = supabaseAdmin.storage
+        .from('uploads')
+        .getPublicUrl(`carousel/${fileName}`);
+
+      imageUrl = publicUrlData.publicUrl;
     }
 
     if (!imageUrl || !title) {
