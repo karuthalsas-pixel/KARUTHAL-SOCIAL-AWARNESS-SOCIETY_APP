@@ -36,13 +36,13 @@ const milestones = [
 
 export function About() {
   return (
-    <section id="about" className="relative overflow-hidden border-t border-white/10 bg-[#001f22] pt-10 pb-28 sm:pb-36 text-[#AFDDE5]">
+    <section id="about" className="relative overflow-x-hidden border-t border-white/10 bg-[#001f22] pt-10 pb-28 sm:pb-36 text-[#AFDDE5]">
       {/* Background glowing light flare */}
       <div className="pointer-events-none absolute right-10 top-1/3 h-[500px] w-[500px] rounded-full bg-[#00F0FF]/55 blur-[100px]" />
       <div className="pointer-events-none absolute left-10 bottom-10 h-[500px] w-[500px] rounded-full bg-[#6366F1]/55 blur-[100px]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 rounded-full bg-[#FF5533]/30 blur-[120px]" />
 
-      <div className="container-page relative z-10">
+      <div className="container-page relative z-10 overflow-x-hidden">
         {/* Official Organization Info Banner */}
         <Reveal>
           <motion.div 

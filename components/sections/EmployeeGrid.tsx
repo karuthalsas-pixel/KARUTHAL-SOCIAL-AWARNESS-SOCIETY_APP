@@ -167,7 +167,7 @@ export function EmployeeGrid() {
         </div>
       </Reveal>
 
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[92%] sm:w-full mx-auto max-w-[100vw]">
+      <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {employees.map((emp, i) => {
           const theme = cardThemes[i % cardThemes.length];
           return (
