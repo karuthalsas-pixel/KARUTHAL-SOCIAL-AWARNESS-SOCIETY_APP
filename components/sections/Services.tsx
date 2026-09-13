@@ -242,14 +242,16 @@ export function Services() {
               {/* Column 1 */}
               <Reveal delay={0.1}>
                 <motion.div 
-                  whileHover={{ y: -12, scale: 1.02 }}
-                  className="group relative bg-gradient-to-b from-[#024950]/60 to-[#001f22]/80 border border-[#0FA4AF]/40 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl h-full flex flex-col hover:border-[#00F0FF] shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(0,240,255,0.25)] transition-all duration-500 overflow-hidden"
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  whileHover={{ y: -16, scale: 1.02, transition: { duration: 0.3 } }}
+                  className="group relative bg-gradient-to-b from-[#0D9488]/30 via-[#042F2E]/70 to-[#001f22]/90 border border-[#2DD4BF]/40 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl h-full flex flex-col hover:border-[#2DD4BF] shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_60px_rgba(45,212,191,0.3)] transition-all overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00F0FF]/0 to-[#00F0FF]/0 group-hover:from-[#00F0FF]/5 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/0 to-[#2DD4BF]/0 group-hover:from-[#2DD4BF]/10 transition-colors duration-500" />
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#00F0FF]/20 border border-[#00F0FF]/50 text-[#00F0FF] shadow-[0_0_15px_rgba(0,240,255,0.3)]">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#2DD4BF]/20 border border-[#2DD4BF]/50 text-[#2DD4BF] shadow-[0_0_20px_rgba(45,212,191,0.4)]">
                         <ShieldCheck className="w-6 h-6" />
                       </div>
                       <h3 className="font-display text-2xl font-bold text-white tracking-wide">Serious Truths</h3>
@@ -261,16 +263,16 @@ export function Services() {
                     
                     <ul className="space-y-5 flex-grow">
                       {[
-                        { title: "The Invisible Shield", desc: "Dismantling fear with intuition. Children learn bodily autonomy and boundary recognition.", color: "text-[#00F0FF]" },
+                        { title: "The Invisible Shield", desc: "Dismantling fear with intuition. Children learn bodily autonomy and boundary recognition.", color: "text-[#2DD4BF]" },
                         { title: "The Clarity Code", desc: "Decoding peer pressure and empowering adolescents to take pride in saying no.", color: "text-[#34D399]" },
                         { title: "Fuel vs. Filler", desc: "Moving past \"eat your greens\" to teach how ultra-processed foods dull energy.", color: "text-[#FBBF24]" },
                         { title: "Reclaiming Reality", desc: "We don't demand they drop technology; we teach them how not to let it own them.", color: "text-[#F472B6]" }
                       ].map((item, idx) => (
                         <li key={idx} className="flex items-start gap-4 p-3 -mx-3 rounded-xl hover:bg-white/5 transition-colors duration-300 cursor-default">
-                          <span className={`${item.color} mt-1 text-lg`}>✦</span>
+                          <span className={`${item.color} mt-1 text-lg drop-shadow-[0_0_5px_currentColor]`}>✦</span>
                           <div>
                             <span className="font-bold text-white block mb-1 text-[15px]">{item.title}</span>
-                            <span className="text-sm text-[#AFDDE5]/80 leading-snug block">{item.desc}</span>
+                            <span className="text-sm text-[#AFDDE5]/90 leading-snug block">{item.desc}</span>
                           </div>
                         </li>
                       ))}
@@ -282,14 +284,16 @@ export function Services() {
               {/* Column 2 */}
               <Reveal delay={0.2}>
                 <motion.div 
-                  whileHover={{ y: -12, scale: 1.02 }}
-                  className="group relative bg-gradient-to-b from-[#4C1D95]/40 to-[#001f22]/80 border border-[#8B5CF6]/40 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl h-full flex flex-col hover:border-[#A78BFA] shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(167,139,250,0.25)] transition-all duration-500 overflow-hidden"
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  whileHover={{ y: -16, scale: 1.02, transition: { duration: 0.3 } }}
+                  className="group relative bg-gradient-to-b from-[#7E22CE]/30 via-[#3B0764]/70 to-[#001f22]/90 border border-[#C084FC]/40 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl h-full flex flex-col hover:border-[#C084FC] shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_60px_rgba(192,132,252,0.3)] transition-all overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#A78BFA]/0 to-[#A78BFA]/0 group-hover:from-[#A78BFA]/5 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#C084FC]/0 to-[#C084FC]/0 group-hover:from-[#C084FC]/10 transition-colors duration-500" />
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/50 text-[#A78BFA] shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C084FC]/20 border border-[#C084FC]/50 text-[#C084FC] shadow-[0_0_20px_rgba(192,132,252,0.4)]">
                         <Sparkles className="w-6 h-6" />
                       </div>
                       <h3 className="font-display text-2xl font-bold text-white tracking-wide">Magic Over Monologues</h3>
@@ -307,10 +311,10 @@ export function Services() {
                         { title: "Interactive Arcs", desc: "Guided scenarios where students make choices and watch outcomes unfold live.", icon: "✨" }
                       ].map((item, idx) => (
                         <li key={idx} className="flex items-start gap-4 p-3 -mx-3 rounded-xl hover:bg-white/5 transition-colors duration-300 cursor-default">
-                          <span className="text-xl mt-0.5">{item.icon}</span>
+                          <span className="text-xl mt-0.5 drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">{item.icon}</span>
                           <div>
                             <span className="font-bold text-[#E9D5FF] block mb-1 text-[15px]">{item.title}</span>
-                            <span className="text-sm text-[#AFDDE5]/80 leading-snug block">{item.desc}</span>
+                            <span className="text-sm text-[#AFDDE5]/90 leading-snug block">{item.desc}</span>
                           </div>
                         </li>
                       ))}
@@ -322,14 +326,16 @@ export function Services() {
               {/* Column 3 */}
               <Reveal delay={0.3}>
                 <motion.div 
-                  whileHover={{ y: -12, scale: 1.02 }}
-                  className="group relative bg-gradient-to-b from-[#831843]/40 to-[#001f22]/80 border border-[#F472B6]/40 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl h-full flex flex-col hover:border-[#F472B6] shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(244,114,182,0.25)] transition-all duration-500 overflow-hidden"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                  whileHover={{ y: -16, scale: 1.02, transition: { duration: 0.3 } }}
+                  className="group relative bg-gradient-to-b from-[#BE185D]/30 via-[#4C0519]/70 to-[#001f22]/90 border border-[#F472B6]/40 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl h-full flex flex-col hover:border-[#F472B6] shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_60px_rgba(244,114,182,0.3)] transition-all overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#F472B6]/0 to-[#F472B6]/0 group-hover:from-[#F472B6]/5 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#F472B6]/0 to-[#F472B6]/0 group-hover:from-[#F472B6]/10 transition-colors duration-500" />
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#F472B6]/20 border border-[#F472B6]/50 text-[#F472B6] shadow-[0_0_15px_rgba(244,114,182,0.3)]">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#F472B6]/20 border border-[#F472B6]/50 text-[#F472B6] shadow-[0_0_20px_rgba(244,114,182,0.4)]">
                         <Users className="w-6 h-6" />
                       </div>
                       <h3 className="font-display text-2xl font-bold text-white tracking-wide">Three Distinct Worlds</h3>
@@ -340,30 +346,30 @@ export function Services() {
                     </p>
                     
                     <div className="space-y-6 flex-grow">
-                      <motion.div whileHover={{ x: 5 }} className="p-5 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/card">
+                      <motion.div whileHover={{ x: 5 }} className="p-5 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/card shadow-[inset_0_0_15px_rgba(255,255,255,0.02)]">
                         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#818CF8] group-hover/card:w-2 transition-all duration-300" />
                         <div className="ml-2">
                           <span className="font-black text-[#818CF8] text-[11px] tracking-[0.2em] uppercase block mb-1">Foundations</span>
                           <span className="text-sm font-bold text-white block mb-2 opacity-90">(KG to Primary)</span>
-                          <p className="text-sm text-[#AFDDE5]/80 leading-relaxed">Warm, colorful, and focused on safe circles, trusting gut instincts, and active play.</p>
+                          <p className="text-sm text-[#AFDDE5]/90 leading-relaxed">Warm, colorful, and focused on safe circles, trusting gut instincts, and active play.</p>
                         </div>
                       </motion.div>
                       
-                      <motion.div whileHover={{ x: 5 }} className="p-5 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/card">
+                      <motion.div whileHover={{ x: 5 }} className="p-5 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/card shadow-[inset_0_0_15px_rgba(255,255,255,0.02)]">
                         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#FBBF24] group-hover/card:w-2 transition-all duration-300" />
                         <div className="ml-2">
                           <span className="font-black text-[#FBBF24] text-[11px] tracking-[0.2em] uppercase block mb-1">Transitions</span>
                           <span className="text-sm font-bold text-white block mb-2 opacity-90">(Upper Primary & Middle)</span>
-                          <p className="text-sm text-[#AFDDE5]/80 leading-relaxed">Interactive dilemmas, critical thinking, cyber traps, and resisting group pressure.</p>
+                          <p className="text-sm text-[#AFDDE5]/90 leading-relaxed">Interactive dilemmas, critical thinking, cyber traps, and resisting group pressure.</p>
                         </div>
                       </motion.div>
                       
-                      <motion.div whileHover={{ x: 5 }} className="p-5 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/card">
+                      <motion.div whileHover={{ x: 5 }} className="p-5 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/card shadow-[inset_0_0_15px_rgba(255,255,255,0.02)]">
                         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#FF5533] group-hover/card:w-2 transition-all duration-300" />
                         <div className="ml-2">
                           <span className="font-black text-[#FF5533] text-[11px] tracking-[0.2em] uppercase block mb-1">Realities</span>
                           <span className="text-sm font-bold text-white block mb-2 opacity-90">(High School & Plus Two)</span>
-                          <p className="text-sm text-[#AFDDE5]/80 leading-relaxed">Direct discourse on chemical dependency, digital dopamine loops, and emotional resilience.</p>
+                          <p className="text-sm text-[#AFDDE5]/90 leading-relaxed">Direct discourse on chemical dependency, digital dopamine loops, and emotional resilience.</p>
                         </div>
                       </motion.div>
                     </div>
