@@ -238,7 +238,7 @@ export function Services() {
               </div>
             </Reveal>
 
-            <div className="grid lg:grid-cols-3 gap-8 px-4 sm:px-6">
+            <div className="grid lg:grid-cols-3 gap-8 w-[92%] sm:w-full mx-auto max-w-[100vw] sm:px-6">
               {/* Column 1 */}
               <Reveal delay={0.1}>
                 <motion.div 
