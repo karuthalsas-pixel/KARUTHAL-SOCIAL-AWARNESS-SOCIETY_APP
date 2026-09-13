@@ -177,8 +177,8 @@ export function EmployeeGrid() {
                 onClick={() => setSelectedEmployee(emp)}
                 className={`cursor-pointer group relative bg-[#024950]/40 backdrop-blur-md rounded-2xl border ${theme.border} ${theme.hoverBorder} overflow-hidden ${theme.shadow} ${theme.hoverShadow} transition-all duration-500 h-full flex flex-col`}
               >
-                {/* Image Section - REMOVED OPACITY OVERLAYS FOR MAXIMUM CLARITY */}
-                <div className="relative h-72 overflow-hidden bg-[#001f22]">
+                {/* Image Section */}
+                <div className="relative aspect-square sm:h-72 sm:aspect-auto w-full overflow-hidden bg-[#001f22]">
                   {emp.imageUrl ? (
                     <Image
                       src={emp.imageUrl}
@@ -193,7 +193,7 @@ export function EmployeeGrid() {
                     </div>
                   )}
                   
-                  {/* Subtle bottom gradient just for text legibility, doesn't affect face */}
+                  {/* Subtle bottom gradient just for text legibility */}
                   <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#024950] to-transparent opacity-90 z-20" />
                 </div>
   
@@ -248,16 +248,16 @@ export function EmployeeGrid() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-[#0FA4AF]/30 bg-gradient-to-br from-[#002b2e] to-[#001f22] shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+              className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto flex flex-col rounded-3xl border border-[#0FA4AF]/30 bg-gradient-to-br from-[#002b2e] to-[#001f22] shadow-[0_0_50px_rgba(0,0,0,0.5)] scrollbar-hide"
             >
               <button
                 onClick={() => setSelectedEmployee(null)}
-                className="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white/70 backdrop-blur-md transition-colors hover:bg-black/60 hover:text-white"
+                className="absolute right-4 top-4 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white/70 backdrop-blur-md transition-colors hover:bg-black/60 hover:text-white"
               >
                 <X size={18} />
               </button>
 
-              <div className="relative h-[400px] w-full bg-[#001f22]">
+              <div className="relative h-[280px] sm:h-[400px] w-full shrink-0 bg-[#001f22]">
                 {selectedEmployee.imageUrl ? (
                   <Image
                     src={selectedEmployee.imageUrl}
@@ -271,10 +271,10 @@ export function EmployeeGrid() {
                     <User size={80} className="text-[#0FA4AF]/50" />
                   </div>
                 )}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#002b2e] to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#002b2e] to-transparent z-10" />
               </div>
 
-              <div className="relative -mt-12 p-8 pt-0">
+              <div className="relative -mt-8 sm:-mt-12 p-6 sm:p-8 pt-0 shrink-0 z-10">
                 <div className="mb-4 inline-flex items-center rounded-full border border-[#00F0FF]/30 bg-[#00F0FF]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#00F0FF] backdrop-blur-md">
                   {selectedEmployee.role}
                 </div>
