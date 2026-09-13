@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ShieldCheck, Ban, Smartphone, AlertTriangle, Apple, Sparkles } from "lucide-react";
+import { ShieldCheck, Ban, Smartphone, AlertTriangle, Apple, Sparkles, Users } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 type ProgramItem = {
@@ -180,8 +180,6 @@ export function Services() {
               </Reveal>
             );
           })}
-        </div>
-
         </div>
 
         {/* NEW CONTENT: Why Lecture When You Can Captivate? */}
