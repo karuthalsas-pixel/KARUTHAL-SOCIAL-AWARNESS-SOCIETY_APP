@@ -136,11 +136,11 @@ export function Contact() {
                   </span>
                   karuthalsas@gmail.com
                 </a>
-                <a href="tel:+919745647909" className="flex items-center gap-3 text-sm text-[#AFDDE5] transition hover:text-[#0FA4AF] font-medium group">
+                <a href="tel:+919656217909" className="flex items-center gap-3 text-sm text-[#AFDDE5] transition hover:text-[#0FA4AF] font-medium group">
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-500/50 bg-emerald-500/20 text-emerald-400 backdrop-blur-md">
                     <Phone className="h-4 w-4" />
                   </span>
-                  +91 9745647909 / +91 9656217909
+                  +91 9656217909
                 </a>
                 <p className="flex items-start gap-3 text-sm text-[#AFDDE5] font-medium">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-amber-500/50 bg-amber-500/20 text-amber-400 backdrop-blur-md">

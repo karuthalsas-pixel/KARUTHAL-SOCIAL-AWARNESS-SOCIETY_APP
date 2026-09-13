@@ -97,7 +97,7 @@ const KB: KBEntry[] = [
     id: "contact",
     keywords: ["contact", "reach", "call", "phone", "number", "email", "mail", "whatsapp", "message", "get in touch", "communicate", "talk", "speak", "enquiry", "inquiry", "helpline"],
     weight: 3,
-    answer: "📞 Contact Karuthal Society\n\n📧 Email: karuthalsas@gmail.com\n📱 Phone/WhatsApp: +91 9745647909\n📱 Phone: +91 9656217909\n📍 Address: P.B. No. 22, Kuttapuzha P.O., Thiruvalla 689103, Kerala\n\n🕐 We respond during business hours.\nYou can also use the Contact form on our website!",
+    answer: "📞 Contact Karuthal Society\n\n📧 Email: karuthalsas@gmail.com\n📱 Phone/WhatsApp: +91 9656217909\n📱 Phone: +91 9656217909\n📍 Address: P.B. No. 22, Kuttapuzha P.O., Thiruvalla 689103, Kerala\n\n🕐 We respond during business hours.\nYou can also use the Contact form on our website!",
     followUp: ["Book a session", "About Karuthal", "Our programs"]
   },
 
@@ -106,7 +106,7 @@ const KB: KBEntry[] = [
     id: "location",
     keywords: ["address", "location", "where", "place", "thiruvalla", "kerala", "office", "headquarters", "situated", "find you", "directions", "map", "kuttapuzha"],
     weight: 3,
-    answer: "📍 Our Location\n\nKaruthal Social Awareness Society\nP.B. No. 22, Kuttapuzha P.O.,\nThiruvalla 689103\nKerala, India\n\n🔖 Reg No: PTM/TC/15/2023\n\nFor directions or to schedule a visit, call us at:\n📞 +91 9745647909",
+    answer: "📍 Our Location\n\nKaruthal Social Awareness Society\nP.B. No. 22, Kuttapuzha P.O.,\nThiruvalla 689103\nKerala, India\n\n🔖 Reg No: PTM/TC/15/2023\n\nFor directions or to schedule a visit, call us at:\n📞 +91 9656217909",
     followUp: ["Contact us", "Book a session"]
   },
 
@@ -115,7 +115,7 @@ const KB: KBEntry[] = [
     id: "booking",
     keywords: ["book", "schedule", "appointment", "register", "enroll", "invite", "organise", "organize", "arrange", "plan", "host", "event", "conduct", "request", "apply", "collaborate"],
     weight: 4,
-    answer: "📅 How to Book a School Mission Session\n\nTo invite us to your school:\n\n1️⃣ Call or WhatsApp us:\n   📞 +91 9745647909 / +91 9656217909\n\n2️⃣ Email us:\n   📧 karuthalsas@gmail.com\n\n3️⃣ Fill the Contact form on our website\n\nPlease share:\n• School name & location\n• Estimated number of students\n• Preferred date & time\n• Grade levels attending\n\nOur team will confirm and plan the session for you!",
+    answer: "📅 How to Book a School Mission Session\n\nTo invite us to your school:\n\n1️⃣ Call or WhatsApp us:\n   📞 +91 9656217909\n\n2️⃣ Email us:\n   📧 karuthalsas@gmail.com\n\n3️⃣ Fill the Contact form on our website\n\nPlease share:\n• School name & location\n• Estimated number of students\n• Preferred date & time\n• Grade levels attending\n\nOur team will confirm and plan the session for you!",
     followUp: ["Contact details", "What programs do you offer?", "Session duration"]
   },
 
@@ -124,7 +124,7 @@ const KB: KBEntry[] = [
     id: "pricing",
     keywords: ["fee", "cost", "price", "charge", "free", "paid", "payment", "money", "budget", "affordable", "rate", "tariff", "how much"],
     weight: 3,
-    answer: "💰 Program Fees\n\nFor detailed information about program fees and packages, please contact us directly:\n\n📞 +91 9745647909 / +91 9656217909\n📧 karuthalsas@gmail.com\n\nOur team will provide you with pricing tailored to your school's size and requirements.",
+    answer: "💰 Program Fees\n\nFor detailed information about program fees and packages, please contact us directly:\n\n📞 +91 9656217909\n📧 karuthalsas@gmail.com\n\nOur team will provide you with pricing tailored to your school's size and requirements.",
     followUp: ["Book a session", "Contact us"]
   },
 
@@ -178,7 +178,7 @@ const KB: KBEntry[] = [
     id: "volunteer",
     keywords: ["volunteer", "join", "support", "help", "contribute", "participate", "internship", "work with", "partner", "collaborate", "sponsor", "donation", "ngo work"],
     weight: 2,
-    answer: "🤝 Join / Support Karuthal\n\nInterested in supporting our mission?\n\nYou can:\n• Volunteer as a facilitator or counselor\n• Partner as a school or institution\n• Support our outreach programs\n• Sponsor awareness sessions\n\nContact us to explore how we can work together:\n📞 +91 9745647909\n📧 karuthalsas@gmail.com",
+    answer: "🤝 Join / Support Karuthal\n\nInterested in supporting our mission?\n\nYou can:\n• Volunteer as a facilitator or counselor\n• Partner as a school or institution\n• Support our outreach programs\n• Sponsor awareness sessions\n\nContact us to explore how we can work together:\n📞 +91 9656217909\n📧 karuthalsas@gmail.com",
     followUp: ["Contact us", "About Karuthal"]
   },
 
@@ -214,7 +214,7 @@ const KB: KBEntry[] = [
     id: "thanks",
     keywords: ["thank", "thanks", "thank you", "thankyou", "ok", "okay", "great", "nice", "good", "awesome", "helpful", "cool", "perfect", "got it", "understood", "clear", "alright"],
     weight: 1,
-    answer: "You're welcome! 😊\n\nFeel free to ask anything else about Karuthal Society. We're always happy to help!\n\n📞 +91 9745647909\n📧 karuthalsas@gmail.com",
+    answer: "You're welcome! 😊\n\nFeel free to ask anything else about Karuthal Society. We're always happy to help!\n\n📞 +91 9656217909\n📧 karuthalsas@gmail.com",
     followUp: ["Our programs", "Book a session", "Contact us"]
   },
 
@@ -223,7 +223,7 @@ const KB: KBEntry[] = [
     id: "goodbye",
     keywords: ["bye", "goodbye", "see you", "take care", "later", "cya", "farewell", "see ya", "ttyl"],
     weight: 1,
-    answer: "Goodbye! 👋 Thank you for your interest in Karuthal Social Awareness Society.\n\nDon't hesitate to reach out anytime:\n📞 +91 9745647909\n📧 karuthalsas@gmail.com\n\nTogether, let's protect and empower our children! 💙",
+    answer: "Goodbye! 👋 Thank you for your interest in Karuthal Social Awareness Society.\n\nDon't hesitate to reach out anytime:\n📞 +91 9656217909\n📧 karuthalsas@gmail.com\n\nTogether, let's protect and empower our children! 💙",
     followUp: []
   }
 ];
@@ -271,7 +271,7 @@ function getAnswer(query: string): { answer: string; followUp: string[] } {
 
   // Fallback
   return {
-    answer: "I'm sorry, I didn't quite understand that. 🤔\n\nYou can ask me about:\n• 📋 Our awareness programs\n• 📅 How to book a School Mission session\n• 📞 Contact details & location\n• 👥 Our team & volunteers\n• 🏆 Our achievements\n\nOr call us directly:\n📞 +91 9745647909",
+    answer: "I'm sorry, I didn't quite understand that. 🤔\n\nYou can ask me about:\n• 📋 Our awareness programs\n• 📅 How to book a School Mission session\n• 📞 Contact details & location\n• 👥 Our team & volunteers\n• 🏆 Our achievements\n\nOr call us directly:\n📞 +91 9656217909",
     followUp: ["Our programs", "Book a session", "Contact us", "About Karuthal"]
   };
 }
@@ -494,3 +494,4 @@ export function Chatbot() {
     </>
   );
 }
+

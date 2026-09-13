@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 
-const PHONE_NUMBER = "919745647909";
+const PHONE_NUMBER = "919656217909";
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hello Karuthal Society! I would like to know more about your School Mission programs."
+  "Hello Karuthal Society! I am interested in your social awareness programs. Could you please provide more information on how to book a School Mission session?"
 );
 
 export function FloatingContactButtons() {

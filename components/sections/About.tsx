@@ -74,7 +74,7 @@ export function About() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone size={18} className="text-[#00F0FF] shrink-0" />
-                    <p>+91 9656217909, +91 9745647909</p>
+                    <p>+91 9656217909</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail size={18} className="text-[#00F0FF] shrink-0" />

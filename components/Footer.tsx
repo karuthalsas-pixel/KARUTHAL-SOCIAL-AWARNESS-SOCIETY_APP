@@ -17,7 +17,7 @@ export function Footer() {
             <p className="font-bold text-[#0FA4AF]">Reg No: PTM/TC/15/2023</p>
             <p>PB.No.22, Kuttapuzha P.O., Thiruvalla - 689103</p>
             <p>Kerala, India</p>
-            <p className="pt-1">Tel: +91 9656217909, +91 9745647909</p>
+            <p className="pt-1">Tel: +91 9656217909</p>
             <p>Email: <a href="mailto:karuthalsas@gmail.com" className="hover:text-[#00F0FF]">karuthalsas@gmail.com</a></p>
           </div>
         </div>

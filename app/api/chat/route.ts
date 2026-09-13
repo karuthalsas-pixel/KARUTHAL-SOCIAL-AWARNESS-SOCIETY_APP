@@ -13,7 +13,7 @@ Here is the master context about Karuthal:
 - Registration Number: PTM/TC/15/2023
 - Location/Address: P.B. No. 22, Kuttapuzha P.O., Thiruvalla 689103, Kerala
 - Contact Email: karuthalsas@gmail.com
-- Contact Phone: +91 9745647909 / +91 9656217909
+- Contact Phone: +91 9656217909
 - Mission: For over a decade, Karuthal has been safeguarding children and youth across India. They deliver comprehensive visual and audio School Mission programs for students from LKG to +2. The programs blend creative visual arts (puppet shows, magic tricks, video, music) with direct student counseling.
 - Milestones: 10+ years of service, 100% student engagement, 1.5 hour sessions.
 
