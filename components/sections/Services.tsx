@@ -182,7 +182,141 @@ export function Services() {
           })}
         </div>
 
-        {/* NEW: Masonry Grid Section */}
+        {/* NEW CONTENT: Why Lecture When You Can Captivate? */}
+        <div className="mt-28 border-t border-[#0FA4AF]/20 pt-20">
+          <Reveal>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00F0FF] via-[#34D399] to-[#FBBF24]">
+                Why Lecture When You Can Captivate?
+              </h2>
+              <p className="mt-6 text-lg text-white leading-relaxed font-semibold">
+                Serious conversations with children usually fail for one reason: fear. When adults use rigid warnings, young minds either tune out or feel overwhelmed.
+              </p>
+              <p className="mt-4 text-[#AFDDE5] leading-relaxed">
+                The Karuthal philosophy flips traditional awareness on its head. In Malayalam, <span className="text-[#00F0FF] font-medium">Karuthal means care and vigilance</span>. We believe that true protection doesn't come from scare tactics—it comes from confidence, clarity, and joy.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid lg:grid-cols-3 gap-10">
+            {/* Column 1 */}
+            <Reveal delay={0.1}>
+              <div className="bg-[#024950]/30 border border-[#0FA4AF]/30 p-8 rounded-3xl backdrop-blur-md h-full flex flex-col hover:border-[#00F0FF]/60 hover:shadow-[0_0_40px_rgba(0,240,255,0.2)] transition-all duration-500">
+                <div className="h-2 w-16 bg-gradient-to-r from-[#00F0FF] to-[#34D399] rounded-full mb-6" />
+                <h3 className="font-display text-2xl font-bold text-white mb-4">Serious Truths, Child-Friendly Language</h3>
+                <p className="text-sm text-[#AFDDE5] mb-6">
+                  In a single, high-energy 90-minute immersion, we transform complex, uncomfortable societal issues into accessible life lessons tailored from KG through Plus Two:
+                </p>
+                <ul className="space-y-4 flex-grow">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00F0FF] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">The Invisible Shield</span>
+                      <span className="text-sm text-[#AFDDE5]/80">We dismantle fear and replace it with intuition. Children learn bodily autonomy and boundary recognition.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00F0FF] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">The Clarity Code</span>
+                      <span className="text-sm text-[#AFDDE5]/80">We decode peer pressure and empower adolescents to take pride in saying no to addictive habits.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00F0FF] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">Fuel vs. Filler</span>
+                      <span className="text-sm text-[#AFDDE5]/80">Moving past "eat your greens." We teach kids how ultra-processed foods dull energy and focus.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#00F0FF] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">Reclaiming Reality</span>
+                      <span className="text-sm text-[#AFDDE5]/80">We don't demand they drop technology; we teach them how not to let technology own them.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </Reveal>
+
+            {/* Column 2 */}
+            <Reveal delay={0.2}>
+              <div className="bg-[#024950]/30 border border-[#F472B6]/30 p-8 rounded-3xl backdrop-blur-md h-full flex flex-col hover:border-[#F472B6]/60 hover:shadow-[0_0_40px_rgba(244,114,182,0.2)] transition-all duration-500">
+                <div className="h-2 w-16 bg-gradient-to-r from-[#F472B6] to-[#FBBF24] rounded-full mb-6" />
+                <h3 className="font-display text-2xl font-bold text-white mb-4">Magic Over Monologues</h3>
+                <p className="text-sm text-[#AFDDE5] mb-6">
+                  Lectures fade by the next morning; emotions stick for years. Karuthal replaces slides and podiums with theatrical engagement:
+                </p>
+                <ul className="space-y-4 flex-grow">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F472B6] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">Magic as Metaphor</span>
+                      <span className="text-sm text-[#AFDDE5]/80">Sleight-of-hand routines that visually demonstrate peer influence, deceit, and personal boundaries.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F472B6] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">The Voice of Puppetry</span>
+                      <span className="text-sm text-[#AFDDE5]/80">Whimsical, relatable characters that tackle sensitive fears so young children feel safe speaking their truth.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F472B6] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">Visual Rhythms & Music</span>
+                      <span className="text-sm text-[#AFDDE5]/80">Catchy musical hooks that turn critical safety rules into natural instincts.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F472B6] mt-1">✧</span>
+                    <div>
+                      <span className="font-bold text-white block">Interactive Story Arcs</span>
+                      <span className="text-sm text-[#AFDDE5]/80">Guided scenarios where students make the choices and watch the outcomes unfold live.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </Reveal>
+
+            {/* Column 3 */}
+            <Reveal delay={0.3}>
+              <div className="bg-[#024950]/30 border border-[#818CF8]/30 p-8 rounded-3xl backdrop-blur-md h-full flex flex-col hover:border-[#818CF8]/60 hover:shadow-[0_0_40px_rgba(129,140,248,0.2)] transition-all duration-500">
+                <div className="h-2 w-16 bg-gradient-to-r from-[#818CF8] to-[#00D2FE] rounded-full mb-6" />
+                <h3 className="font-display text-2xl font-bold text-white mb-4">One Stage, Three Worlds</h3>
+                <p className="text-sm text-[#AFDDE5] mb-6">
+                  Rather than a one-size-fits-all presentation, each Karuthal session adapts dynamically to the developmental stage in the room:
+                </p>
+                <div className="space-y-6 flex-grow">
+                  <div className="p-4 rounded-xl bg-white/5 border border-white/10 relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#818CF8]" />
+                    <span className="font-bold text-[#818CF8] text-sm tracking-widest uppercase block mb-1">Foundations</span>
+                    <span className="text-xs font-semibold text-white block mb-2">(KG to Primary)</span>
+                    <p className="text-sm text-[#AFDDE5]/80">Warm, colorful, musical, and entirely focused on safe circles, trusting gut instincts, and active play over screens.</p>
+                  </div>
+                  
+                  <div className="p-4 rounded-xl bg-white/5 border border-white/10 relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#FBBF24]" />
+                    <span className="font-bold text-[#FBBF24] text-sm tracking-widest uppercase block mb-1">Transitions</span>
+                    <span className="text-xs font-semibold text-white block mb-2">(Upper Primary & Middle School)</span>
+                    <p className="text-sm text-[#AFDDE5]/80">Interactive dilemmas, critical thinking, cyber traps, and resisting group pressure.</p>
+                  </div>
+                  
+                  <div className="p-4 rounded-xl bg-white/5 border border-white/10 relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#FF5533]" />
+                    <span className="font-bold text-[#FF5533] text-sm tracking-widest uppercase block mb-1">Realities</span>
+                    <span className="text-xs font-semibold text-white block mb-2">(High School & Plus Two)</span>
+                    <p className="text-sm text-[#AFDDE5]/80">Direct, peer-level discourse on chemical dependency, digital dopamine loops, and emotional resilience.</p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* RESTORED: Masonry Grid Section */}
         {!loading && (
           <div className="mt-16 pt-16 border-t border-white/10">
             <Reveal>
