@@ -83,13 +83,6 @@ export const metadata: Metadata = {
     images: ["/images/og-cover.jpg"],
     creator: "@karuthalsas"
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" }
-    ],
-    apple: "/apple-touch-icon.png"
-  },
   manifest: "/manifest.webmanifest",
   verification: {
     google: "ATuf5TWlLX0bxP2rx0Ee1mtVodmg7PGafgSNm5x82PQ"
