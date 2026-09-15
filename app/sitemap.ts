@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aternastudio.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.karuthalsas.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sections = ["", "#about", "#work", "#gallery", "#contact"];

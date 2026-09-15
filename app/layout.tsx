@@ -72,7 +72,7 @@ export const metadata: Metadata = {
         url: "/images/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Aterna Studio — Architecture & Interior Design"
+        alt: "Karuthal Social Awareness Society"
       }
     ]
   },
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/images/og-cover.jpg"],
-    creator: "@aternastudio"
+    creator: "@karuthalsas"
   },
   icons: {
     icon: [
@@ -108,46 +108,39 @@ export const viewport: Viewport = {
 function StructuredData() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "NGO",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    alternateName: "Aterna Architecture & Interior Design",
+    alternateName: "Karuthal Social Awareness Society",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo.png`,
     image: `${SITE_URL}/images/og-cover.jpg`,
-    telephone: "+1-503-555-0142",
-    priceRange: "$$$",
+    telephone: "+91-9656217909",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "118 Pine Mill Lane, Suite 4",
-      addressLocality: "Portland",
-      addressRegion: "OR",
-      postalCode: "97209",
-      addressCountry: "US"
+      streetAddress: "Karuthal Office",
+      addressLocality: "Thiruvalla",
+      addressRegion: "Kerala",
+      postalCode: "689101",
+      addressCountry: "IN"
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 45.5231,
-      longitude: -122.6765
+      latitude: 9.3833,
+      longitude: 76.5750
     },
-    areaServed: "United States",
+    areaServed: "Kerala, India",
     sameAs: [
-      "https://www.instagram.com/aternastudio",
-      "https://www.linkedin.com/company/aternastudio",
-      "https://www.pinterest.com/aternastudio"
+      "https://www.facebook.com/karuthalsas",
+      "https://www.instagram.com/karuthalsas"
     ],
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00"
-    },
     makesOffer: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Residential Architecture" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Design" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Adaptive Reuse & Renovation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hospitality Design" } }
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "School Mission Program" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Child Protection & Safety" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Anti-Addiction Guidance" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cyber & Mobile Trap Safety" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Road Safety Youth Campaign" } }
     ]
   };
 
