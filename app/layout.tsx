@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   verification: {
-    google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE"
+    google: "ATuf5TWlLX0bxP2rx0Ee1mtVodmg7PGafgSNm5x82PQ"
   }
 };
 
