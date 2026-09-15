@@ -111,14 +111,14 @@ export function Services() {
   }, []);
 
   return (
-    <section id="work" className="relative overflow-x-hidden border-t border-white/10 bg-[#001f22] py-28 sm:py-36 text-[#AFDDE5]">
+    <section id="work" className="relative overflow-hidden border-t border-white/10 bg-[#001f22] py-28 sm:py-36 text-[#AFDDE5]">
       {/* Background ambient glowing light orbs */}
       <div className="pointer-events-none absolute -left-20 top-1/4 h-[500px] w-[500px] rounded-full bg-[#00F0FF]/55 blur-[100px]" />
       <div className="pointer-events-none absolute -right-20 bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#EC4899]/55 blur-[100px]" />
       <div className="pointer-events-none absolute left-1/3 top-2/3 h-[450px] w-[450px] rounded-full bg-[#FBBF24]/50 blur-[100px]" />
       <div className="pointer-events-none absolute right-1/3 top-1/4 h-96 w-96 rounded-full bg-[#34D399]/30 blur-[120px]" />
 
-      <div className="container-page relative z-10 overflow-x-hidden">
+      <div className="container-page relative z-10">
         <div className="max-w-2xl mb-14">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#00F0FF] shadow-[0_0_15px_rgba(0,240,255,0.3)]">
