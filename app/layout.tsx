@@ -107,7 +107,7 @@ function StructuredData() {
     alternateName: "Karuthal Social Awareness Society",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.png`,
+    logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}/images/og-cover.jpg`,
     telephone: "+91-9656217909",
     address: {
