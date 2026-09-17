@@ -7,13 +7,13 @@ import { Users, Image as ImageIcon, LayoutDashboard, Globe, MessageSquare, Image
 import { cn } from "@/lib/utils";
 
 const adminNav = [
-  { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
-  { name: "Inbox Messages", href: "/admin/messages", icon: Inbox },
-  { name: "Manage Employees", href: "/admin/employees", icon: Users },
-  { name: "Awareness Programs", href: "/admin/programs", icon: Heart },
-  { name: "Event Gallery", href: "/admin/gallery", icon: ImageIcon },
-  { name: "Testimonials", href: "/admin/testimonials", icon: MessageSquare },
-  { name: "Home Carousel", href: "/admin/carousel", icon: Images },
+  { name: "Dashboard", href: "/admin", icon: LayoutDashboard, colorClass: "text-emerald-400", bgClass: "from-emerald-500/20 to-emerald-400/10 border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.15)]" },
+  { name: "Inbox Messages", href: "/admin/messages", icon: Inbox, colorClass: "text-violet-400", bgClass: "from-violet-500/20 to-violet-400/10 border-violet-500/30 shadow-[0_0_20px_rgba(139,92,246,0.15)]" },
+  { name: "Manage Employees", href: "/admin/employees", icon: Users, colorClass: "text-indigo-400", bgClass: "from-indigo-500/20 to-indigo-400/10 border-indigo-500/30 shadow-[0_0_20px_rgba(99,102,241,0.15)]" },
+  { name: "Awareness Programs", href: "/admin/programs", icon: Heart, colorClass: "text-rose-400", bgClass: "from-rose-500/20 to-rose-400/10 border-rose-500/30 shadow-[0_0_20px_rgba(244,63,94,0.15)]" },
+  { name: "Event Gallery", href: "/admin/gallery", icon: ImageIcon, colorClass: "text-pink-400", bgClass: "from-pink-500/20 to-pink-400/10 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.15)]" },
+  { name: "Testimonials", href: "/admin/testimonials", icon: MessageSquare, colorClass: "text-amber-400", bgClass: "from-amber-500/20 to-amber-400/10 border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.15)]" },
+  { name: "Home Carousel", href: "/admin/carousel", icon: Images, colorClass: "text-sky-400", bgClass: "from-sky-500/20 to-sky-400/10 border-sky-500/30 shadow-[0_0_20px_rgba(14,165,233,0.15)]" },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -29,11 +29,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="flex min-h-screen bg-[#001416] font-sans text-[#AFDDE5] relative selection:bg-[#00F0FF]/30 overflow-hidden">
       {/* Premium Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#0FA4AF]/15 blur-[120px] animate-pulse-slow" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-[#00F0FF]/10 blur-[120px]" />
-        <div className="absolute top-[40%] left-[60%] w-[30%] h-[30%] rounded-full bg-[#964734]/10 blur-[100px]" />
+        {/* Dynamic Colorful Glowing Orbs */}
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-emerald-500/15 blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-pink-500/15 blur-[120px]" />
+        <div className="absolute top-[40%] left-[60%] w-[30%] h-[30%] rounded-full bg-indigo-500/15 blur-[100px] animate-[pulse_10s_ease-in-out_infinite_2s]" />
+        <div className="absolute top-[60%] left-[10%] w-[30%] h-[30%] rounded-full bg-amber-500/10 blur-[100px]" />
         {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(15,164,175,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,164,175,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]" />
       </div>
 
       {/* Mobile Header */}
@@ -93,12 +95,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 className={cn(
                   "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-sm font-medium relative group overflow-hidden",
                   isActive
-                    ? "text-[#00F0FF] shadow-[0_0_20px_rgba(0,240,255,0.15)]"
+                    ? cn(item.colorClass, item.bgClass.split(" ").find(c => c.startsWith("shadow")))
                     : "text-[#AFDDE5]/70 hover:text-white"
                 )}
               >
                 {isActive && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#0FA4AF]/20 to-[#00F0FF]/10 border border-[#00F0FF]/30 rounded-xl" />
+                  <div className={cn("absolute inset-0 bg-gradient-to-r border rounded-xl", item.bgClass.split(" ").filter(c => !c.startsWith("shadow")).join(" "))} />
                 )}
                 {!isActive && (
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-xl transition-colors duration-300" />
