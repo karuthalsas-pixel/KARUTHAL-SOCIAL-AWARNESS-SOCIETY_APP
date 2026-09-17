@@ -163,8 +163,7 @@ function StructuredData() {
   );
 }
 
-import { FloatingContactButtons } from "@/components/ui/FloatingContactButtons";
-import { Chatbot } from "@/components/ui/Chatbot";
+import { GlobalUI } from "@/components/GlobalUI";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -180,8 +179,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-paper text-ink dark:bg-paper-dark dark:text-ink-dark font-sans antialiased selection:bg-clay/30 selection:text-ink">
         {children}
-        <Chatbot />
-        <FloatingContactButtons />
+        <GlobalUI />
       </body>
     </html>
   );

@@ -64,7 +64,7 @@ export function CarouselSection() {
           } : { x: 0 }}
           transition={shouldAnimate ? {
             ease: "linear",
-            duration: 8, // Much faster moving
+            duration: 30, // Slower scrolling
             repeat: Infinity,
           } : {}}
         >
