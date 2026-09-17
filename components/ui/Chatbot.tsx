@@ -183,10 +183,137 @@ const KB: KBEntry[] = [
   // ── TEAM / COUNSELORS ──
   {
     id: "team",
-    keywords: ["team", "staff", "counselor", "who conducts", "trainer", "facilitator", "expert", "professional", "who are you", "member", "employees"],
+    keywords: ["team", "staff", "counselor", "who conducts", "trainer", "facilitator", "expert", "professional", "who are you", "member", "employees", "all members", "who are the members"],
     weight: 2,
-    answer: "👥 Our Team\n\nKaruthal's programs are conducted by:\n\n• Experienced student counselors\n• Social awareness educators\n• Child welfare specialists\n\nAll our facilitators are trained to deliver age-appropriate content with empathy, professionalism, and genuine care for student well-being.",
-    followUp: ["About Karuthal", "Our programs"]
+    answer: "👥 Our Team\n\nKaruthal's programs are conducted by experienced student counselors and child welfare specialists.\nOur leadership includes:\n• Kurian Mathew (President)\n• Mathew Abraham (Vice President)\n• Blessen David (Secretary)\n\n(Ask me about any specific member by name or role for their contact details!)",
+    followUp: ["Who is the President?", "Who is the Secretary?"]
+  },
+
+  {
+    id: "member_abraham_oommen",
+    keywords: ["abraham oommen", "patron", "abraham", "oommen"],
+    weight: 3,
+    answer: "👤 ABRAHAM OOMMEN\nRole: Patron\nPhone: 9995767469",
+    followUp: ["Who is the President?", "Who is the Secretary?"]
+  },
+  {
+    id: "member_kurian_mathew",
+    keywords: ["kurian mathew", "president", "kurian"],
+    weight: 3,
+    answer: "👤 KURIAN MATHEW\nRole: President\nPhone: +91 9447120692",
+    followUp: ["Who is the Secretary?", "Who is the Vice President?"]
+  },
+  {
+    id: "member_mathew_abraham",
+    keywords: ["mathew abraham", "vice president", "vice-president"],
+    weight: 3,
+    answer: "👤 MATHEW ABRAHAM\nRole: Vice President\nPhone: 9961538398",
+    followUp: ["Who is the President?", "Who is the Secretary?"]
+  },
+  {
+    id: "member_blessen_david",
+    keywords: ["blessen david", "blessen", "blesson", "secretary", "secreter"],
+    weight: 4,
+    answer: "👤 BLESSEN DAVID\nRole: Secretary\nPhone: 79941 20288",
+    followUp: ["Who is the President?", "Who is the Joint Secretary?"]
+  },
+  {
+    id: "member_vineesh",
+    keywords: ["vineesh", "murikkattu", "vineesh k", "joint secretary", "joint-secretary"],
+    weight: 3,
+    answer: "👤 VINEESH K MURIKKATTU\nRole: Joint Secretary\nPhone: 9447809842",
+    followUp: ["Who is the Secretary?", "Who is the Treasurer?"]
+  },
+  {
+    id: "member_anoop",
+    keywords: ["anoop", "anoop r v", "treasurer"],
+    weight: 3,
+    answer: "👤 ANOOP. R.V\nRole: Treasurer\nPhone: 90203 33554",
+    followUp: ["Who is the President?", "Who is the Secretary?"]
+  },
+  {
+    id: "member_job",
+    keywords: ["job k thomas", "job thomas", "office administrator", "administrator", "admin", "executive member"],
+    weight: 3,
+    answer: "👤 JOB K. THOMAS\nRole: Executive Member / Office Administrator\nPhone: 9526084984",
+    followUp: ["Who is the Secretary?"]
+  },
+  {
+    id: "member_samson",
+    keywords: ["samson", "baby", "samson p baby"],
+    weight: 3,
+    answer: "👤 SAMSON P BABY\nRole: Executive Member\nPhone: 9400183181",
+    followUp: []
+  },
+  {
+    id: "member_johnson",
+    keywords: ["johnson", "samuel", "johnson samuel"],
+    weight: 3,
+    answer: "👤 JOHNSON SAMUEL\nRole: Executive Member\nPhone: 9446107026",
+    followUp: []
+  },
+  {
+    id: "member_arun",
+    keywords: ["arun", "arun g k"],
+    weight: 3,
+    answer: "👤 ARUN G K\nRole: Executive Member\nPhone: 94864 45004",
+    followUp: []
+  },
+  {
+    id: "member_moncy",
+    keywords: ["moncy", "moncy p m"],
+    weight: 3,
+    answer: "👤 MONCY P. M\nRole: Executive Member\nPhone: 9633203593",
+    followUp: []
+  },
+  {
+    id: "member_mathew_m",
+    keywords: ["mathew munjannattu", "geevarughese", "mathew m"],
+    weight: 3,
+    answer: "👤 MATHEW MUNJANNATTU GEEVARUGHESE\nRole: Executive Member\nPhone: +91 80891 95183",
+    followUp: []
+  },
+  {
+    id: "member_biju",
+    keywords: ["biju", "eapen", "biju eapen"],
+    weight: 3,
+    answer: "👤 BIJU EAPEN\nRole: Executive Member\nPhone: 9745383915",
+    followUp: []
+  },
+  {
+    id: "member_salu",
+    keywords: ["salu", "varghese", "salu varghese"],
+    weight: 3,
+    answer: "👤 SALU VARGHESE\nRole: Executive Member\nPhone: 9847820405",
+    followUp: []
+  },
+  {
+    id: "member_sajan",
+    keywords: ["sajan", "yohannan", "sajan yohannan"],
+    weight: 3,
+    answer: "👤 SAJAN YOHANNAN\nRole: Executive Member\nPhone: 97461 68687",
+    followUp: []
+  },
+  {
+    id: "member_abraham_p",
+    keywords: ["abraham philipose", "philipose"],
+    weight: 3,
+    answer: "👤 ABRAHAM PHILIPOSE\nRole: Executive Member\nPhone: 9633135772",
+    followUp: []
+  },
+  {
+    id: "member_benny",
+    keywords: ["benny", "benny p john", "benny john"],
+    weight: 3,
+    answer: "👤 BENNY P. JOHN\nRole: Executive Member\nPhone: 9048944345",
+    followUp: []
+  },
+  {
+    id: "member_aksa",
+    keywords: ["aksa", "joy", "aksa joy"],
+    weight: 3,
+    answer: "👤 AKSA JOY\nRole: Executive Member\nPhone: 9495747877",
+    followUp: []
   },
 
   // ── VOLUNTEER ──
@@ -252,9 +379,36 @@ const KB: KBEntry[] = [
 //   Multiplied by the entry's weight
 // Returns the best-scoring entry above threshold.
 // ─────────────────────────────────────────────────
-function getAnswer(query: string): { answer: string; followUp: string[] } {
+function getAnswer(query: string, history: Message[]): { answer: string; followUp: string[] } {
   const q = query.toLowerCase().trim();
   const tokens = q.split(/\s+/);
+
+  // Check for context-dependent queries like "what is his number" or "role"
+  if (q.includes("number") || q.includes("phone") || q.includes("contact")) {
+    const lastMsg = history.length > 0 ? history[history.length - 1].content : "";
+    if (lastMsg.includes("Role:") && lastMsg.includes("Phone:")) {
+      const phoneMatch = lastMsg.match(/Phone:\s*([+\d\s]+)/);
+      if (phoneMatch) {
+        return {
+          answer: `The contact number is: ${phoneMatch[1].trim()}`,
+          followUp: []
+        };
+      }
+    }
+  }
+
+  if (q.includes("role") && !q.includes("president") && !q.includes("secretary") && !q.includes("treasurer")) {
+    const lastMsg = history.length > 0 ? history[history.length - 1].content : "";
+    if (lastMsg.includes("Role:") && lastMsg.includes("Phone:")) {
+      const roleMatch = lastMsg.match(/Role:\s*([^\n]+)/);
+      if (roleMatch) {
+        return {
+          answer: `The role is: ${roleMatch[1].trim()}`,
+          followUp: []
+        };
+      }
+    }
+  }
 
   let bestScore = 0;
   let bestEntry: KBEntry | null = null;
@@ -362,8 +516,10 @@ export function Chatbot() {
     // Simulate a natural typing delay
     const delay = 600 + Math.random() * 600;
     setTimeout(() => {
-      const { answer, followUp } = getAnswer(userMsg.content);
-      setMessages((prev) => [...prev, { role: "assistant", content: answer, followUp }]);
+      setMessages((prev) => {
+        const { answer, followUp } = getAnswer(userMsg.content, prev);
+        return [...prev, { role: "assistant", content: answer, followUp }];
+      });
       setIsTyping(false);
     }, delay);
   };
