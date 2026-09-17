@@ -12,6 +12,15 @@ type CarouselItem = {
   order: number;
 };
 
+const cardThemes = [
+  { border: "border-cyan-500/40 group-hover:border-cyan-400", shadow: "group-hover:shadow-[0_0_25px_rgba(34,211,238,0.25)]", title: "from-cyan-300 to-cyan-50", tint: "bg-cyan-500/10" },
+  { border: "border-violet-500/40 group-hover:border-violet-400", shadow: "group-hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]", title: "from-violet-300 to-violet-50", tint: "bg-violet-500/10" },
+  { border: "border-rose-500/40 group-hover:border-rose-400", shadow: "group-hover:shadow-[0_0_25px_rgba(244,63,94,0.25)]", title: "from-rose-300 to-rose-50", tint: "bg-rose-500/10" },
+  { border: "border-amber-500/40 group-hover:border-amber-400", shadow: "group-hover:shadow-[0_0_25px_rgba(245,158,11,0.25)]", title: "from-amber-300 to-amber-50", tint: "bg-amber-500/10" },
+  { border: "border-emerald-500/40 group-hover:border-emerald-400", shadow: "group-hover:shadow-[0_0_25px_rgba(16,185,129,0.25)]", title: "from-emerald-300 to-emerald-50", tint: "bg-emerald-500/10" },
+  { border: "border-pink-500/40 group-hover:border-pink-400", shadow: "group-hover:shadow-[0_0_25px_rgba(236,72,153,0.25)]", title: "from-pink-300 to-pink-50", tint: "bg-pink-500/10" },
+];
+
 export function CarouselSection() {
   const [items, setItems] = useState<CarouselItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -68,29 +77,39 @@ export function CarouselSection() {
             repeat: Infinity,
           } : {}}
         >
-          {duplicatedItems.map((item, index) => (
-            <div
-              key={`${item.id}-${index}`}
-              className="relative h-64 w-96 shrink-0 overflow-hidden rounded-2xl border border-white/10 group"
-            >
-              <Image
-                src={item.imageUrl}
-                alt={item.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#001f22] via-[#001f22]/40 to-transparent opacity-80" />
-              <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <h3 className="font-display text-xl font-bold text-white shadow-sm truncate">{item.title}</h3>
-                {item.description && (
-                  <p className="mt-2 text-sm text-[#AFDDE5] opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2 whitespace-normal leading-relaxed">
-                    {item.description}
-                  </p>
-                )}
+          {duplicatedItems.map((item, index) => {
+            const origIndex = index % items.length;
+            const theme = cardThemes[origIndex % cardThemes.length];
+            return (
+              <div
+                key={`${item.id}-${index}`}
+                className={`relative h-64 w-96 shrink-0 overflow-hidden rounded-2xl border-2 transition-all duration-500 group ${theme.border} ${theme.shadow}`}
+              >
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                
+                {/* Colored overlay tint on hover */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${theme.tint}`} />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-[#001f22] via-[#001f22]/60 to-transparent opacity-90" />
+                <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className={`font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${theme.title} shadow-sm truncate`}>
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="mt-2 text-sm text-[#AFDDE5] opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2 whitespace-normal leading-relaxed">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>
