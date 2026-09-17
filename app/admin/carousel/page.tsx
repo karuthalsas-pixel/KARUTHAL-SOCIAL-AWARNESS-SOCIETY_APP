@@ -129,6 +129,13 @@ export default function AdminCarousel() {
     setForm({ imageUrl: item.imageUrl, title: item.title, description: item.description || "", order: item.order });
     setSelectedFile(null);
     setPreviewUrl(item.imageUrl);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    
+    // Also scroll the main container if it's the scrollable area
+    const mainContainer = document.querySelector('main');
+    if (mainContainer) {
+      mainContainer.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -231,11 +238,11 @@ export default function AdminCarousel() {
                 <h3 className="font-bold text-white mb-1 truncate">{item.title}</h3>
                 <p className="text-sm text-[#AFDDE5]/70 line-clamp-2 mb-4 flex-1">{item.description}</p>
                 
-                <div className="flex justify-end gap-2 mt-auto relative z-10">
-                  <button type="button" onClick={() => openEdit(item)} className="flex-1 flex justify-center items-center gap-2 p-2 text-[#AFDDE5]/70 hover:text-white bg-white/5 hover:bg-[#0FA4AF]/20 rounded-lg transition-colors text-sm cursor-pointer relative z-20">
+                <div className="flex justify-end gap-2 mt-auto relative z-10 pointer-events-auto">
+                  <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openEdit(item); }} className="flex-1 flex justify-center items-center gap-2 p-2 text-[#AFDDE5]/70 hover:text-white bg-white/5 hover:bg-[#0FA4AF]/20 rounded-lg transition-colors text-sm cursor-pointer relative z-20 pointer-events-auto">
                     <Pencil size={14} /> Edit
                   </button>
-                  <button type="button" onClick={() => setItemToDelete({ id: item.id, title: item.title })} className="flex-1 flex justify-center items-center gap-2 p-2 text-red-400 hover:text-red-300 bg-white/5 hover:bg-red-500/20 rounded-lg transition-colors text-sm cursor-pointer relative z-20">
+                  <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setItemToDelete({ id: item.id, title: item.title }); }} className="flex-1 flex justify-center items-center gap-2 p-2 text-red-400 hover:text-red-300 bg-white/5 hover:bg-red-500/20 rounded-lg transition-colors text-sm cursor-pointer relative z-20 pointer-events-auto">
                     <Trash2 size={14} /> Delete
                   </button>
                 </div>

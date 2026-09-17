@@ -7,13 +7,55 @@ import { Users, Image as ImageIcon, LayoutDashboard, Globe, MessageSquare, Image
 import { cn } from "@/lib/utils";
 
 const adminNav = [
-  { name: "Dashboard", href: "/admin", icon: LayoutDashboard, colorClass: "text-emerald-400", bgClass: "from-emerald-500/20 to-emerald-400/10 border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.15)]" },
-  { name: "Inbox Messages", href: "/admin/messages", icon: Inbox, colorClass: "text-violet-400", bgClass: "from-violet-500/20 to-violet-400/10 border-violet-500/30 shadow-[0_0_20px_rgba(139,92,246,0.15)]" },
-  { name: "Manage Employees", href: "/admin/employees", icon: Users, colorClass: "text-indigo-400", bgClass: "from-indigo-500/20 to-indigo-400/10 border-indigo-500/30 shadow-[0_0_20px_rgba(99,102,241,0.15)]" },
-  { name: "Awareness Programs", href: "/admin/programs", icon: Heart, colorClass: "text-rose-400", bgClass: "from-rose-500/20 to-rose-400/10 border-rose-500/30 shadow-[0_0_20px_rgba(244,63,94,0.15)]" },
-  { name: "Event Gallery", href: "/admin/gallery", icon: ImageIcon, colorClass: "text-pink-400", bgClass: "from-pink-500/20 to-pink-400/10 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.15)]" },
-  { name: "Testimonials", href: "/admin/testimonials", icon: MessageSquare, colorClass: "text-amber-400", bgClass: "from-amber-500/20 to-amber-400/10 border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.15)]" },
-  { name: "Home Carousel", href: "/admin/carousel", icon: Images, colorClass: "text-sky-400", bgClass: "from-sky-500/20 to-sky-400/10 border-sky-500/30 shadow-[0_0_20px_rgba(14,165,233,0.15)]" },
+  { 
+    name: "Dashboard", 
+    href: "/admin", 
+    icon: LayoutDashboard, 
+    gradient: "from-cyan-400 to-violet-500",
+    shadow: "shadow-[0_0_15px_rgba(6,182,212,0.4)]" 
+  },
+  { 
+    name: "Inbox Messages", 
+    href: "/admin/messages", 
+    icon: Inbox, 
+    gradient: "from-violet-500 to-orange-400",
+    shadow: "shadow-[0_0_15px_rgba(139,92,246,0.4)]" 
+  },
+  { 
+    name: "Manage Employees", 
+    href: "/admin/employees", 
+    icon: Users, 
+    gradient: "from-pink-500 to-rose-400",
+    shadow: "shadow-[0_0_15px_rgba(236,72,153,0.4)]" 
+  },
+  { 
+    name: "Awareness Programs", 
+    href: "/admin/programs", 
+    icon: Heart, 
+    gradient: "from-emerald-400 to-cyan-500",
+    shadow: "shadow-[0_0_15px_rgba(16,185,129,0.4)]" 
+  },
+  { 
+    name: "Event Gallery", 
+    href: "/admin/gallery", 
+    icon: ImageIcon, 
+    gradient: "from-blue-400 to-indigo-500",
+    shadow: "shadow-[0_0_15px_rgba(59,130,246,0.4)]" 
+  },
+  { 
+    name: "Testimonials", 
+    href: "/admin/testimonials", 
+    icon: MessageSquare, 
+    gradient: "from-amber-400 to-orange-500",
+    shadow: "shadow-[0_0_15px_rgba(245,158,11,0.4)]" 
+  },
+  { 
+    name: "Home Carousel", 
+    href: "/admin/carousel", 
+    icon: Images, 
+    gradient: "from-rose-400 to-purple-500",
+    shadow: "shadow-[0_0_15px_rgba(244,63,94,0.4)]" 
+  },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -93,19 +135,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-sm font-medium relative group overflow-hidden",
+                  "flex items-center gap-4 px-3 py-2.5 rounded-xl transition-all duration-300 text-sm font-medium relative group overflow-hidden",
                   isActive
-                    ? cn(item.colorClass, item.bgClass.split(" ").find(c => c.startsWith("shadow")))
-                    : "text-[#AFDDE5]/70 hover:text-white"
+                    ? "text-white bg-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]"
+                    : "text-[#AFDDE5]/70 hover:text-white hover:bg-white/5"
                 )}
               >
-                {isActive && (
-                  <div className={cn("absolute inset-0 bg-gradient-to-r border rounded-xl", item.bgClass.split(" ").filter(c => !c.startsWith("shadow")).join(" "))} />
-                )}
-                {!isActive && (
-                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-xl transition-colors duration-300" />
-                )}
-                <Icon size={18} className={cn("relative z-10 transition-transform duration-300", isActive ? "scale-110" : "group-hover:scale-110")} />
+                <div className={cn(
+                  "w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-all duration-300 bg-gradient-to-br", 
+                  item.gradient,
+                  isActive ? cn("scale-110", item.shadow) : "opacity-80 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3"
+                )}>
+                  <Icon size={18} className="text-white drop-shadow-md" />
+                </div>
                 <span className="relative z-10">{item.name}</span>
               </Link>
             );
