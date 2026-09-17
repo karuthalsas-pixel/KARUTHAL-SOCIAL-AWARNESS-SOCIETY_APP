@@ -231,11 +231,11 @@ export default function AdminCarousel() {
                 <h3 className="font-bold text-white mb-1 truncate">{item.title}</h3>
                 <p className="text-sm text-[#AFDDE5]/70 line-clamp-2 mb-4 flex-1">{item.description}</p>
                 
-                <div className="flex justify-end gap-2 mt-auto">
-                  <button onClick={() => openEdit(item)} className="flex-1 flex justify-center items-center gap-2 p-2 text-[#AFDDE5]/70 hover:text-white bg-white/5 hover:bg-[#0FA4AF]/20 rounded-lg transition-colors text-sm">
+                <div className="flex justify-end gap-2 mt-auto relative z-10">
+                  <button type="button" onClick={() => openEdit(item)} className="flex-1 flex justify-center items-center gap-2 p-2 text-[#AFDDE5]/70 hover:text-white bg-white/5 hover:bg-[#0FA4AF]/20 rounded-lg transition-colors text-sm cursor-pointer relative z-20">
                     <Pencil size={14} /> Edit
                   </button>
-                  <button onClick={() => setItemToDelete({ id: item.id, title: item.title })} className="flex-1 flex justify-center items-center gap-2 p-2 text-red-400 hover:text-red-300 bg-white/5 hover:bg-red-500/20 rounded-lg transition-colors text-sm">
+                  <button type="button" onClick={() => setItemToDelete({ id: item.id, title: item.title })} className="flex-1 flex justify-center items-center gap-2 p-2 text-red-400 hover:text-red-300 bg-white/5 hover:bg-red-500/20 rounded-lg transition-colors text-sm cursor-pointer relative z-20">
                     <Trash2 size={14} /> Delete
                   </button>
                 </div>
