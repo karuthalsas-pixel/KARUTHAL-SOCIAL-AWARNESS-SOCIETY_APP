@@ -34,7 +34,7 @@ export default function AdminPrograms() {
 
   const fetchItems = async () => {
     try {
-      const res = await fetch("/api/admin/programs");
+      const res = await fetch("/api/portal-karuthal-secure/programs");
       const data = await res.json();
       if (data.ok) setItems(data.data);
     } catch (err) {
@@ -73,7 +73,7 @@ export default function AdminPrograms() {
     }
 
     const isUpdate = !!isEditing;
-    const url = isUpdate ? `/api/admin/programs/${isEditing.id}` : "/api/admin/programs";
+    const url = isUpdate ? `/api/admin/programs/${isEditing.id}` : "/api/portal-karuthal-secure/programs";
     const method = isUpdate ? "PUT" : "POST";
 
     const data = new FormData();

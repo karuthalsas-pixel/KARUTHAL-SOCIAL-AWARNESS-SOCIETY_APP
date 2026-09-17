@@ -164,8 +164,12 @@ function StructuredData() {
 }
 
 import { GlobalUI } from "@/components/GlobalUI";
+import { getSession } from "@/lib/auth";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const session = await getSession();
+  const isAdminUser = session?.role === "ADMIN";
+
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
@@ -179,7 +183,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-paper text-ink dark:bg-paper-dark dark:text-ink-dark font-sans antialiased selection:bg-clay/30 selection:text-ink">
         {children}
-        <GlobalUI />
+        <GlobalUI isAdminUser={isAdminUser} />
       </body>
     </html>
   );

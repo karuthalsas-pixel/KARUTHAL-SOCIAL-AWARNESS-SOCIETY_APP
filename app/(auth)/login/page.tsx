@@ -32,7 +32,7 @@ function LoginForm() {
 
       if (res.ok) {
         if (data.role === "ADMIN") {
-          router.push("/admin");
+          router.push("/portal-karuthal-secure");
         } else {
           router.push("/dashboard");
         }

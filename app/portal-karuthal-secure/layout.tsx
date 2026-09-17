@@ -9,49 +9,49 @@ import { cn } from "@/lib/utils";
 const adminNav = [
   { 
     name: "Dashboard", 
-    href: "/admin", 
+    href: "/portal-karuthal-secure", 
     icon: LayoutDashboard, 
     gradient: "from-cyan-400 to-violet-500",
     shadow: "shadow-[0_0_15px_rgba(6,182,212,0.4)]" 
   },
   { 
     name: "Inbox Messages", 
-    href: "/admin/messages", 
+    href: "/portal-karuthal-secure/messages", 
     icon: Inbox, 
     gradient: "from-violet-500 to-orange-400",
     shadow: "shadow-[0_0_15px_rgba(139,92,246,0.4)]" 
   },
   { 
     name: "Manage Employees", 
-    href: "/admin/employees", 
+    href: "/portal-karuthal-secure/employees", 
     icon: Users, 
     gradient: "from-pink-500 to-rose-400",
     shadow: "shadow-[0_0_15px_rgba(236,72,153,0.4)]" 
   },
   { 
     name: "Awareness Programs", 
-    href: "/admin/programs", 
+    href: "/portal-karuthal-secure/programs", 
     icon: Heart, 
     gradient: "from-emerald-400 to-cyan-500",
     shadow: "shadow-[0_0_15px_rgba(16,185,129,0.4)]" 
   },
   { 
     name: "Event Gallery", 
-    href: "/admin/gallery", 
+    href: "/portal-karuthal-secure/gallery", 
     icon: ImageIcon, 
     gradient: "from-blue-400 to-indigo-500",
     shadow: "shadow-[0_0_15px_rgba(59,130,246,0.4)]" 
   },
   { 
     name: "Testimonials", 
-    href: "/admin/testimonials", 
+    href: "/portal-karuthal-secure/testimonials", 
     icon: MessageSquare, 
     gradient: "from-amber-400 to-orange-500",
     shadow: "shadow-[0_0_15px_rgba(245,158,11,0.4)]" 
   },
   { 
     name: "Home Carousel", 
-    href: "/admin/carousel", 
+    href: "/portal-karuthal-secure/carousel", 
     icon: Images, 
     gradient: "from-rose-400 to-purple-500",
     shadow: "shadow-[0_0_15px_rgba(244,63,94,0.4)]" 
@@ -82,7 +82,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       {/* Mobile Header */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-40 h-16 bg-[#001f22]/90 backdrop-blur-xl border-b border-[#0FA4AF]/20 px-4 flex items-center justify-between shadow-lg">
-        <Link href="/admin" className="flex items-center gap-3">
+        <Link href="/portal-karuthal-secure" className="flex items-center gap-3">
           <img src="/logo.png" alt="Karuthal Logo" className="h-8 w-auto" />
           <span className="font-display font-bold text-white tracking-wider text-sm">KARUTHAL ADMIN</span>
         </Link>
@@ -109,7 +109,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       )}>
         {/* Header */}
         <div className="h-24 flex items-center px-8 border-b border-[#0FA4AF]/20 bg-gradient-to-b from-white/5 to-transparent shrink-0">
-          <Link href="/admin" className="flex items-center gap-4 group">
+          <Link href="/portal-karuthal-secure" className="flex items-center gap-4 group">
             <div className="relative">
               <div className="absolute -inset-2 bg-white/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img

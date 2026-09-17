@@ -36,7 +36,7 @@ export default function MessagesAdminPage() {
 
   const fetchMessages = async () => {
     try {
-      const res = await fetch("/api/admin/messages");
+      const res = await fetch("/api/portal-karuthal-secure/messages");
       const data = await res.json();
       if (data.ok) setMessages(data.data);
     } catch (error) {
@@ -48,7 +48,7 @@ export default function MessagesAdminPage() {
 
   const updateStatus = async (id: number, status: "new" | "read" | "responded") => {
     try {
-      const res = await fetch("/api/admin/messages", {
+      const res = await fetch("/api/portal-karuthal-secure/messages", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, status }),
@@ -78,7 +78,7 @@ export default function MessagesAdminPage() {
     if (!replyText.trim()) return;
     setSendingReply(true);
     try {
-      const res = await fetch("/api/admin/messages/reply", {
+      const res = await fetch("/api/portal-karuthal-secure/messages/reply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messageId: msg.id, clientEmail: msg.email, clientName: msg.name, replyText }),

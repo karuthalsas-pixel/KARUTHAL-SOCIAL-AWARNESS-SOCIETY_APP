@@ -110,7 +110,7 @@ export function Navbar({ isAuthenticated = false, role }: NavbarProps) {
             <div className="flex items-center gap-3 ml-4 pl-4 border-l border-white/15">
               {isAuthenticated && (
                 <>
-                  <Link href={role === "ADMIN" ? "/admin" : "/dashboard"}>
+                  <Link href={role === "ADMIN" ? "/portal-karuthal-secure" : "/dashboard"}>
                     <Button size="sm" variant="secondary" className="px-4 py-1.5 h-auto text-xs">Dashboard</Button>
                   </Link>
                   <Button size="sm" variant="outline" className="px-4 py-1.5 h-auto text-xs bg-red-500/10 text-red-400 border-red-500/30 hover:bg-red-500/20 hover:text-red-300 transition-colors" onClick={handleLogout}>
@@ -196,7 +196,7 @@ export function Navbar({ isAuthenticated = false, role }: NavbarProps) {
               <div className="mt-auto pt-8 flex flex-col gap-3">
                 {isAuthenticated && (
                   <>
-                    <Link href={role === "ADMIN" ? "/admin" : "/dashboard"} className="w-full">
+                    <Link href={role === "ADMIN" ? "/portal-karuthal-secure" : "/dashboard"} className="w-full">
                       <Button className="w-full" variant="secondary">Dashboard</Button>
                     </Link>
                     <Button className="w-full bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30" onClick={handleLogout}>

@@ -12,7 +12,7 @@ export default function AdminDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         {/* Inbox Card - Violet */}
-        <Link href="/admin/messages" className="group block bg-[#001f22]/50 border border-violet-500/20 p-6 rounded-2xl hover:bg-violet-500/10 hover:border-violet-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(139,92,246,0.15)] relative overflow-hidden">
+        <Link href="/portal-karuthal-secure/messages" className="group block bg-[#001f22]/50 border border-violet-500/20 p-6 rounded-2xl hover:bg-violet-500/10 hover:border-violet-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(139,92,246,0.15)] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-violet-500/20 transition-colors" />
           <div className="flex items-center gap-4 mb-4 relative z-10">
             <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center text-violet-400 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(139,92,246,0.2)]">
@@ -29,7 +29,7 @@ export default function AdminDashboard() {
         </Link>
 
         {/* Employees Card - Indigo */}
-        <Link href="/admin/employees" className="group block bg-[#001f22]/50 border border-indigo-500/20 p-6 rounded-2xl hover:bg-indigo-500/10 hover:border-indigo-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(99,102,241,0.15)] relative overflow-hidden">
+        <Link href="/portal-karuthal-secure/employees" className="group block bg-[#001f22]/50 border border-indigo-500/20 p-6 rounded-2xl hover:bg-indigo-500/10 hover:border-indigo-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(99,102,241,0.15)] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-indigo-500/20 transition-colors" />
           <div className="flex items-center gap-4 mb-4 relative z-10">
             <div className="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(99,102,241,0.2)]">
@@ -46,7 +46,7 @@ export default function AdminDashboard() {
         </Link>
 
         {/* Programs Card - Rose */}
-        <Link href="/admin/programs" className="group block bg-[#001f22]/50 border border-rose-500/20 p-6 rounded-2xl hover:bg-rose-500/10 hover:border-rose-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(244,63,94,0.15)] relative overflow-hidden">
+        <Link href="/portal-karuthal-secure/programs" className="group block bg-[#001f22]/50 border border-rose-500/20 p-6 rounded-2xl hover:bg-rose-500/10 hover:border-rose-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(244,63,94,0.15)] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-rose-500/20 transition-colors" />
           <div className="flex items-center gap-4 mb-4 relative z-10">
             <div className="w-12 h-12 rounded-xl bg-rose-500/20 flex items-center justify-center text-rose-400 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(244,63,94,0.2)]">
@@ -63,7 +63,7 @@ export default function AdminDashboard() {
         </Link>
 
         {/* Gallery Card - Pink */}
-        <Link href="/admin/gallery" className="group block bg-[#001f22]/50 border border-pink-500/20 p-6 rounded-2xl hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] relative overflow-hidden">
+        <Link href="/portal-karuthal-secure/gallery" className="group block bg-[#001f22]/50 border border-pink-500/20 p-6 rounded-2xl hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-pink-500/20 transition-colors" />
           <div className="flex items-center gap-4 mb-4 relative z-10">
             <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(236,72,153,0.2)]">
@@ -80,7 +80,7 @@ export default function AdminDashboard() {
         </Link>
 
         {/* Testimonials Card - Amber */}
-        <Link href="/admin/testimonials" className="group block bg-[#001f22]/50 border border-amber-500/20 p-6 rounded-2xl hover:bg-amber-500/10 hover:border-amber-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(245,158,11,0.15)] relative overflow-hidden">
+        <Link href="/portal-karuthal-secure/testimonials" className="group block bg-[#001f22]/50 border border-amber-500/20 p-6 rounded-2xl hover:bg-amber-500/10 hover:border-amber-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(245,158,11,0.15)] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-amber-500/20 transition-colors" />
           <div className="flex items-center gap-4 mb-4 relative z-10">
             <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(245,158,11,0.2)]">
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
         </Link>
 
         {/* Carousel Card - Sky */}
-        <Link href="/admin/carousel" className="group block bg-[#001f22]/50 border border-sky-500/20 p-6 rounded-2xl hover:bg-sky-500/10 hover:border-sky-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(14,165,233,0.15)] relative overflow-hidden">
+        <Link href="/portal-karuthal-secure/carousel" className="group block bg-[#001f22]/50 border border-sky-500/20 p-6 rounded-2xl hover:bg-sky-500/10 hover:border-sky-500/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(14,165,233,0.15)] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-sky-500/20 transition-colors" />
           <div className="flex items-center gap-4 mb-4 relative z-10">
             <div className="w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(14,165,233,0.2)]">

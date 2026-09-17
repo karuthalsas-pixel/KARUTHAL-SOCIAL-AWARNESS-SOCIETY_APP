@@ -31,7 +31,7 @@ export default function AdminTestimonials() {
 
   const fetchTestimonials = async () => {
     try {
-      const res = await fetch("/api/admin/testimonials");
+      const res = await fetch("/api/portal-karuthal-secure/testimonials");
       const data = await res.json();
       if (data.ok) setTestimonials(data.data);
     } catch (err) {
@@ -61,7 +61,7 @@ export default function AdminTestimonials() {
     e.preventDefault();
     setSaving(true);
     const isUpdate = !!editingId;
-    const url = isUpdate ? `/api/admin/testimonials/${editingId}` : "/api/admin/testimonials";
+    const url = isUpdate ? `/api/admin/testimonials/${editingId}` : "/api/portal-karuthal-secure/testimonials";
     const method = isUpdate ? "PUT" : "POST";
 
     try {

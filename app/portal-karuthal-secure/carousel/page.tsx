@@ -34,7 +34,7 @@ export default function AdminCarousel() {
 
   const fetchItems = async () => {
     try {
-      const res = await fetch("/api/admin/carousel");
+      const res = await fetch("/api/portal-karuthal-secure/carousel");
       const data = await res.json();
       if (data.ok) setItems(data.data);
     } catch (err) {
@@ -74,7 +74,7 @@ export default function AdminCarousel() {
     }
 
     const isUpdate = !!isEditing;
-    const url = isUpdate ? `/api/admin/carousel/${isEditing.id}` : "/api/admin/carousel";
+    const url = isUpdate ? `/api/admin/carousel/${isEditing.id}` : "/api/portal-karuthal-secure/carousel";
     const method = isUpdate ? "PUT" : "POST";
 
     const data = new FormData();

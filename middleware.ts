@@ -9,7 +9,7 @@ export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
   // Define protected routes
-  const isAdminRoute = path.startsWith('/admin');
+  const isAdminRoute = path.startsWith('/portal-karuthal-secure');
   const isDashboardRoute = path.startsWith('/dashboard');
   const isAuthRoute = path.startsWith('/login') || path.startsWith('/register') || path.startsWith('/forgot-password') || path.startsWith('/reset-password');
 
@@ -37,7 +37,7 @@ export async function middleware(request: NextRequest) {
   // Auth routes (login/register) - Redirect to dashboard if already logged in
   if (isAuthRoute && payload) {
     if (payload.role === 'ADMIN') {
-      return NextResponse.redirect(new URL('/admin', request.url));
+      return NextResponse.redirect(new URL('/portal-karuthal-secure', request.url));
     }
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
