@@ -26,7 +26,23 @@ const KB: KBEntry[] = [
     keywords: ["hello", "hi", "hey", "helo", "hai", "hii", "vanakkam", "namaste", "good morning", "good afternoon", "good evening", "good night", "howdy", "greetings", "ഹലോ"],
     weight: 1,
     answer: "Hello! 👋 Welcome to Karuthal Social Awareness Society!\n\nI can help you with:\n• 📋 Our awareness programs\n• 📞 Contact details & location\n• 📅 How to book a session\n• 🏆 Our achievements\n• 👥 Our team\n\nWhat would you like to know?",
-    followUp: ["Our programs", "Contact us", "Book a session", "About Karuthal"]
+    followUp: ["Our programs", "Contact us", "Book a session", "How are you?"]
+  },
+
+  // ── SMALL TALK ──
+  {
+    id: "small_talk_how_are_you",
+    keywords: ["how are you", "how r u", "how do you do", "hope you are well", "how are u"],
+    weight: 3,
+    answer: "I'm just a helpful AI assistant, but I'm doing great! Thank you for asking! 😊 How are you doing today?",
+    followUp: ["I am doing well", "I need help with programs", "Book a session"]
+  },
+  {
+    id: "small_talk_response_good",
+    keywords: ["doing well", "im fine", "doing great", "i am good", "fine", "good", "great", "excellent"],
+    weight: 1,
+    answer: "That's wonderful to hear! 🌟 Is there anything specific I can help you with regarding Karuthal Society today?",
+    followUp: ["Our programs", "Contact us"]
   },
 
   // ── ABOUT ──
@@ -36,6 +52,15 @@ const KB: KBEntry[] = [
     weight: 2,
     answer: "🏛️ Karuthal Social Awareness Society\n\n• 📌 Reg No: PTM/TC/15/2023\n• 📍 Thiruvalla, Kerala, India\n• 🕰️ 10+ years of service\n• 🎯 Mission: Safeguarding children & youth across India\n\nWe deliver interactive, 1.5-hour School Mission programs for students from LKG to +2. Our sessions combine puppet shows, magic, videos, music, and live student counseling to make social awareness genuinely impactful.",
     followUp: ["What programs do you offer?", "How to book?", "Contact details"]
+  },
+
+  // ── LEADERSHIP ──
+  {
+    id: "leadership",
+    keywords: ["president", "founder", "chairman", "director", "who started", "who is the head", "leader", "vinson", "varghese"],
+    weight: 3,
+    answer: "👥 Leadership\n\nThe President of Karuthal Social Awareness Society is Vinson Varghese. Under his dedicated leadership, the organization strives to safeguard and educate the youth of India against modern social hazards.",
+    followUp: ["About Karuthal", "Our programs"]
   },
 
   // ── ALL PROGRAMS OVERVIEW ──
@@ -92,22 +117,13 @@ const KB: KBEntry[] = [
     followUp: ["Other programs", "Book this program", "Contact us"]
   },
 
-  // ── CONTACT ──
+  // ── CONTACT & LOCATION ──
   {
-    id: "contact",
-    keywords: ["contact", "reach", "call", "phone", "number", "email", "mail", "whatsapp", "message", "get in touch", "communicate", "talk", "speak", "enquiry", "inquiry", "helpline"],
-    weight: 3,
-    answer: "📞 Contact Karuthal Society\n\n📧 Email: karuthalsas@gmail.com\n📱 WhatsApp: 9656217909\n📞 Call: 9745647909\n📍 Address: PB.No.22, KUTTAPUZHA P.O, THIRUVALLA - 689103, PATHANAMTHITTA, KERALA, INDIA\n\n🕐 We respond during business hours.\nYou can also use the Contact form on our website!",
+    id: "contact_location",
+    keywords: ["contact", "reach", "call", "phone", "number", "email", "mail", "whatsapp", "message", "get in touch", "communicate", "talk", "speak", "enquiry", "inquiry", "helpline", "address", "location", "where", "place", "thiruvalla", "kerala", "office", "headquarters", "situated", "find you", "directions", "map", "kuttapuzha"],
+    weight: 4,
+    answer: "KARUTHAL SOCIAL AWARENESS SOCIETY\nReg.No: PTM/TC/15/2023\nPB.No.22,\nKUTTAPUZHA P.O THIRUVALLA - 689103\nPATHANAMTHITTA \nKERALA, INDIA\nTel: 9656217909, 9745647909\n\n📧 Email: karuthalsas@gmail.com\n\nYou can also reach out to us using the Contact form on our website!",
     followUp: ["Book a session", "About Karuthal", "Our programs"]
-  },
-
-  // ── LOCATION ──
-  {
-    id: "location",
-    keywords: ["address", "location", "where", "place", "thiruvalla", "kerala", "office", "headquarters", "situated", "find you", "directions", "map", "kuttapuzha"],
-    weight: 3,
-    answer: "📍 Our Location\n\nKaruthal Social Awareness Society\nPB.No.22, KUTTAPUZHA P.O\nTHIRUVALLA - 689103\nPATHANAMTHITTA, KERALA, INDIA\n\n🔖 Reg No: PTM/TC/15/2023\n\nFor directions or to schedule a visit, call us at:\n📞 9745647909\n📱 WhatsApp: 9656217909",
-    followUp: ["Contact us", "Book a session"]
   },
 
   // ── BOOKING ──
@@ -167,7 +183,7 @@ const KB: KBEntry[] = [
   // ── TEAM / COUNSELORS ──
   {
     id: "team",
-    keywords: ["team", "staff", "counselor", "who conducts", "trainer", "facilitator", "expert", "professional", "who are you", "founder", "member", "employees"],
+    keywords: ["team", "staff", "counselor", "who conducts", "trainer", "facilitator", "expert", "professional", "who are you", "member", "employees"],
     weight: 2,
     answer: "👥 Our Team\n\nKaruthal's programs are conducted by:\n\n• Experienced student counselors\n• Social awareness educators\n• Child welfare specialists\n\nAll our facilitators are trained to deliver age-appropriate content with empathy, professionalism, and genuine care for student well-being.",
     followUp: ["About Karuthal", "Our programs"]
@@ -176,9 +192,9 @@ const KB: KBEntry[] = [
   // ── VOLUNTEER ──
   {
     id: "volunteer",
-    keywords: ["volunteer", "join", "support", "help", "contribute", "participate", "internship", "work with", "partner", "collaborate", "sponsor", "donation", "ngo work"],
+    keywords: ["volunteer", "join", "support", "help", "contribute", "participate", "internship", "work with", "partner", "collaborate", "sponsor", "donation", "ngo work", "donate", "fund"],
     weight: 2,
-    answer: "🤝 Join / Support Karuthal\n\nInterested in supporting our mission?\n\nYou can:\n• Volunteer as a facilitator or counselor\n• Partner as a school or institution\n• Support our outreach programs\n• Sponsor awareness sessions\n\nContact us to explore how we can work together:\n📞 9745647909 / 📱 9656217909\n📧 karuthalsas@gmail.com",
+    answer: "🤝 Join / Support Karuthal\n\nInterested in supporting our mission?\n\nYou can:\n• Volunteer as a facilitator or counselor\n• Partner as a school or institution\n• Support our outreach programs\n• Sponsor awareness sessions or donate\n\nContact us to explore how we can work together:\n📞 9745647909 / 📱 9656217909\n📧 karuthalsas@gmail.com",
     followUp: ["Contact us", "About Karuthal"]
   },
 
