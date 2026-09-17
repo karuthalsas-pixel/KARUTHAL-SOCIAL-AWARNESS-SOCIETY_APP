@@ -110,7 +110,7 @@ export function Hero() {
                 <div className="flex flex-wrap items-center gap-3 text-xs text-[#AFDDE5] font-semibold">
                   <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-[#FF5533] animate-pulse" /> Thiruvalla, Kerala</span>
                   <span>&bull;</span>
-                  <span className="text-[#00F0FF]">Ph: +91 9656217909</span>
+                  <span className="text-[#00F0FF]">Ph: 9656217909, 9745647909</span>
                 </div>
               </div>
             </motion.div>

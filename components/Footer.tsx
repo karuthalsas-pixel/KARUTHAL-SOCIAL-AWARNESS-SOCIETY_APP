@@ -15,9 +15,10 @@ export function Footer() {
           </div>
           <div className="text-[11px] text-[#AFDDE5]/70 mt-2 space-y-1 text-center sm:text-left">
             <p className="font-bold text-[#0FA4AF]">Reg No: PTM/TC/15/2023</p>
-            <p>PB.No.22, Kuttapuzha P.O., Thiruvalla - 689103</p>
-            <p>Kerala, India</p>
-            <p className="pt-1">Tel: +91 9656217909</p>
+            <p>PB.No.22, KUTTAPUZHA P.O</p>
+            <p>THIRUVALLA - 689103</p>
+            <p>PATHANAMTHITTA, KERALA, INDIA</p>
+            <p className="pt-1">Tel: <a href="https://wa.me/919656217909?text=Hello%20Karuthal%20Society!%20I%20am%20interested%20in%20your%20social%20awareness%20programs.%20Could%20you%20please%20provide%20more%20information%20on%20how%20to%20book%20a%20School%20Mission%20session%3F" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:text-[#00F0FF]">9656217909</a>, <a href="tel:+919745647909" className="text-[#00F0FF] hover:text-white">9745647909</a></p>
             <p>Email: <a href="mailto:karuthalsas@gmail.com" className="hover:text-[#00F0FF]">karuthalsas@gmail.com</a></p>
           </div>
         </div>

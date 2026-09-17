@@ -70,11 +70,15 @@ export function About() {
                 <div className="space-y-4 text-sm text-[#AFDDE5]/80">
                   <div className="flex items-start gap-3">
                     <MapPin size={18} className="text-[#00F0FF] mt-1 shrink-0" />
-                    <p>PB.No.22, Kuttapuzha P.O.,<br/>Thiruvalla - 689103, Kerala, India</p>
+                    <p>PB.No.22, KUTTAPUZHA P.O<br/>THIRUVALLA - 689103<br/>PATHANAMTHITTA<br/>KERALA, INDIA</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone size={18} className="text-[#00F0FF] shrink-0" />
-                    <p>+91 9656217909</p>
+                    <p>
+                      <a href="https://wa.me/919656217909?text=Hello%20Karuthal%20Society!%20I%20am%20interested%20in%20your%20social%20awareness%20programs.%20Could%20you%20please%20provide%20more%20information%20on%20how%20to%20book%20a%20School%20Mission%20session%3F" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:text-white transition-colors">9656217909</a>
+                      {", "}
+                      <a href="tel:+919745647909" className="text-[#00F0FF] hover:text-white transition-colors">9745647909</a>
+                    </p>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail size={18} className="text-[#00F0FF] shrink-0" />
@@ -103,22 +107,7 @@ export function About() {
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-8 pt-6 border-t border-[#0FA4AF]/10">
-                  <div className="flex items-center gap-3">
-                    <Users size={20} className="text-[#818CF8]" />
-                    <div>
-                      <p className="text-xs text-[#AFDDE5]/60 uppercase tracking-wider">Secretary</p>
-                      <p className="font-semibold text-white">Kurian Mathew</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Users size={20} className="text-[#818CF8]" />
-                    <div>
-                      <p className="text-xs text-[#AFDDE5]/60 uppercase tracking-wider">Secretary</p>
-                      <p className="font-semibold text-white">Blessen David</p>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </motion.div>

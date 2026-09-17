@@ -136,22 +136,28 @@ export function Contact() {
                   </span>
                   karuthalsas@gmail.com
                 </a>
-                <a href="tel:+919656217909" className="flex items-center gap-3 text-sm text-[#AFDDE5] transition hover:text-[#0FA4AF] font-medium group">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-500/50 bg-emerald-500/20 text-emerald-400 backdrop-blur-md">
+                <div className="flex items-center gap-3 text-sm text-[#AFDDE5] font-medium group">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-500/50 bg-emerald-500/20 text-emerald-400 backdrop-blur-md shrink-0">
                     <Phone className="h-4 w-4" />
                   </span>
-                  +91 9656217909
-                </a>
-                <p className="flex items-start gap-3 text-sm text-[#AFDDE5] font-medium">
+                  <p>
+                    <a href="https://wa.me/919656217909?text=Hello%20Karuthal%20Society!%20I%20am%20interested%20in%20your%20social%20awareness%20programs.%20Could%20you%20please%20provide%20more%20information%20on%20how%20to%20book%20a%20School%20Mission%20session%3F" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:text-[#0FA4AF] transition">9656217909</a>
+                    {", "}
+                    <a href="tel:+919745647909" className="text-[#00F0FF] hover:text-[#0FA4AF] transition">9745647909</a>
+                  </p>
+                </div>
+                <div className="flex items-start gap-3 text-sm text-[#AFDDE5] font-medium">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-amber-500/50 bg-amber-500/20 text-amber-400 backdrop-blur-md">
                     <MapPin className="h-4 w-4" />
                   </span>
                   <span className="pt-1">
-                    P.B. No. 22, Kuttapuzha P.O.,<br />
-                    Thiruvalla - 689103, Kerala, India<br />
+                    PB.No.22, KUTTAPUZHA P.O<br />
+                    THIRUVALLA - 689103<br />
+                    PATHANAMTHITTA<br />
+                    KERALA, INDIA<br />
                     <span className="text-xs text-[#0FA4AF] mt-1 inline-block">Reg No: PTM/TC/15/2023</span>
                   </span>
-                </p>
+                </div>
               </div>
             </Reveal>
           </div>

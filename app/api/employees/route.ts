@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    const items = await db.select().from(employees).orderBy(asc(employees.name));
+    const items = await db.select().from(employees).orderBy(asc(employees.order));
     return NextResponse.json({ ok: true, items }, { status: 200 });
   } catch (error) {
     console.error("Employees fetch error:", error);

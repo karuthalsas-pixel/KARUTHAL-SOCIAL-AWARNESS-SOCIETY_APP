@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 
-const PHONE_NUMBER = "919656217909";
+const WHATSAPP_NUMBER = "919656217909";
+const CALL_NUMBER = "919745647909";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hello Karuthal Society! I am interested in your social awareness programs. Could you please provide more information on how to book a School Mission session?"
 );
@@ -13,7 +14,7 @@ export function FloatingContactButtons() {
     <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-center gap-4">
       {/* WhatsApp Button */}
       <motion.a
-        href={`https://wa.me/${PHONE_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
@@ -34,7 +35,7 @@ export function FloatingContactButtons() {
 
       {/* Call Button */}
       <motion.a
-        href={`tel:+${PHONE_NUMBER}`}
+        href={`tel:+${CALL_NUMBER}`}
         aria-label="Call Karuthal Society"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
