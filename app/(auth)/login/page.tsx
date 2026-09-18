@@ -32,9 +32,9 @@ function LoginForm() {
 
       if (res.ok) {
         if (data.role === "ADMIN") {
-          router.push("/portal-karuthal-secure");
+          router.replace("/portal-karuthal-secure");
         } else {
-          router.push("/dashboard");
+          router.replace("/dashboard");
         }
       } else {
         setError(data.message || "Invalid credentials");
